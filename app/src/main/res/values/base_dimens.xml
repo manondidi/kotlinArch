@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 状态高度 -->
+    <dimen name="base_status_bar_height">24dp</dimen>
+    <!-- 沉浸式导航栏高度 -->
+    <dimen name="base_immersion_bar_height">68dp</dimen>
+    <!-- ToolBar高度(为了替换系统的ActionBar的值) -->
+    <dimen name="base_toolbar_height">43dp</dimen>
+
+    <dimen name="base_left_right_padding">15dp</dimen>
+
+    <dimen name="base_text_1_size">17dp</dimen>
+    <dimen name="base_text_2_size">16dp</dimen>
+    <dimen name="base_text_3_size">13dp</dimen>
+    <dimen name="base_text_4_size">10dp</dimen>
+
+
+    <dimen name="common_dialog_width">300dp</dimen>
+
+    <dimen name="common_toolbar_height">48dp</dimen>
+    <dimen name="common_edge_margin">15dp</dimen>
+    <dimen name="common_toolbar_title_font_size">17dp</dimen>
+    <dimen name="common_toolbar_btn_text_font_size">16dp</dimen>
+    <dimen name="comment_feed_content_text_size">16dp</dimen>
+
+    <!-- 头像、昵称、时间 -->
+    <dimen name="common_avatar_size">30dp</dimen>
+    <dimen name="common_nickname_size">13dp</dimen>
+    <dimen name="common_nickname_margin_left">40dp</dimen>
+    <dimen name="common_gender_margin_left">3dp</dimen>
+    <dimen name="common_create_time_size">10dp</dimen>
+    <dimen name="common_create_time_margin_top">16dp</dimen>
+    <dimen name="common_avatar_margin_bottom">15dp</dimen>
+
+    <!-- 沉浸式导航栏高度 -->
+    <dimen name="immersion_bar_height">68dp</dimen>
+    <!-- 状态栏高度 -->
+    <dimen name="status_bar_height">24dp</dimen>
+
+    <!-- 通用分割线高度 -->
+    <dimen name="common_divider_height">6dp</dimen>
+
+    <!-- 文本内容需要与昵称对齐时候的左边距, 不包括通用的paddingLeft -->
+    <dimen name="left_align_nickname_margin_left">40dp</dimen>
+
+    <dimen name="common_input_text_size">14dp</dimen>
+
+    <!-- 进度对话框宽度 -->
+    <dimen name="common_progress_dialog_width">300dp</dimen>
+
+    <!-- 图片的圆角大小 -->
+    <dimen name="common_image_radius">8dp</dimen>
+
+    <!-- tab高度 -->
+    <dimen name="common_tab_height">40dp</dimen>
+</resources>

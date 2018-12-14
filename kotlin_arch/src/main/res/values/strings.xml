@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">kotlin_arch</string>
+    <string name="state_string_error">加载失败</string>
+    <string name="state_string_empty">空空如也</string>
+</resources>

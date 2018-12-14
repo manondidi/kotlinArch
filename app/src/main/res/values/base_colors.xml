@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_color_primary">#ffffffff</color>
+    <color name="base_color_primary_dark">#ffcccccc</color>
+    <color name="base_color_primary_dark_v23">#ffffffff</color>
+    <color name="base_color_accent">#ff0cc975</color>
+    <color name="base_color_accent_dark">#ff05b969</color>
+
+    <!-- 背景色 -->
+    <color name="windowBackground">#f3f3f3</color>
+
+    <!-- 一级字色 -->
+    <color name="base_text_1_color">#ff1c1c1c</color>
+    <!-- 二级字色 -->
+    <color name="base_text_2_color">#ff717171</color>
+    <!-- 三级（弱化）字色 -->
+    <color name="base_text_3_color">#ffaaaaaa</color>
+    <!-- 背景色 -->
+    <color name="base_background">#fff5f5f5</color>
+    <!-- 分割线 -->
+    <color name="base_divider_color">@color/base_background</color>
+
+
+    <color name="white">#ffffff</color> <!-- 白色 -->
+
+
+    <color name="transparent">#00000000</color>
+
+    <color name="common_feed_content_color">#ff0a0a0a</color>
+    <color name="common_toolbar_title_color">#ff1c1c1c</color>
+    <color name="common_toolbar_btn_normal_color">@color/base_color_accent</color>
+    <color name="common_toolbar_btn_disable_color">#ffaaaaaa</color>
+
+    <!-- 头像、昵称、时间 -->
+    <color name="common_nickname_color">@color/base_text_2_color</color>
+    <color name="common_create_time_color">#ffaaaaaa</color>
+
+    <!-- 链接字体颜色 -->
+    <color name="common_link_normal_text_color">#0062b0</color>
+
+
+
+    <!-- popupwindow item背景色：未点击 -->
+    <color name="popupwindow_item_unpressed_bg_color">#ffffffff</color>
+    <!-- popupwindow item背景色：点击 -->
+    <color name="popupwindow_item_pressed_bg_color">#4dffffff</color>
+
+    <!-- 输入框字数正常（未超出字数）颜色 -->
+    <color name="edittext_count_normal_text_color">#aaaaaa</color>
+    <!-- 输入框字数超出颜色 -->
+    <color name="edittext_count_beyond_text_color">#d01716</color>
+
+
+
+    <!--黑色-->
+    <color name="base_black">#ff000000</color>
+    <!--50%黑色-->
+    <color name="base_black_50">#7f000000</color>
+    <!--20%黑色-->
+    <color name="base_black_20">#33000000</color>
+    <color name="base_black_10">#19000000</color>
+    <color name="base_black_40">#66000000</color>
+
+    <color name="transparent05">#0B000000</color>
+    <color name="transparent10">#1A000000</color>
+    <color name="transparent100">#FF000000</color>
+    <color name="transparent100_white">#FFffffff</color>
+    <color name="transparent10_white">#1Affffff</color>
+    <color name="transparent20">#33000000</color>
+    <color name="transparent20_white">#33ffffff</color>
+    <color name="transparent30">#4D000000</color>
+    <color name="transparent30_white">#4Dffffff</color>
+    <color name="transparent40">#66000000</color>
+    <color name="transparent40_white">#66ffffff</color>
+    <color name="transparent50">#80000000</color>
+    <color name="transparent50_white">#80ffffff</color>
+    <color name="transparent60">#9A000000</color>
+    <color name="transparent60_white">#9Affffff</color>
+    <color name="transparent70">#B3000000</color>
+    <color name="transparent70_white">#B3ffffff</color>
+    <color name="transparent80">#CC000000</color>
+    <color name="transparent80_white">#CCffffff</color>
+    <color name="transparent90">#E5000000</color>
+    <color name="transparent90_white">#E5ffffff</color>
+    <color name="transparent_white">#00ffffff</color>
+
+    <!--白色-->
+    <color name="base_white">#ffffffff</color>
+    <color name="base_white_30">#4dffffff</color>
+
+    <color name="message_red_dot_color">#fffa0d0d</color>
+
+</resources>

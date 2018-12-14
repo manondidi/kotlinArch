@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    >
+
+    <TextView
+        android:id="@+id/tvSeeMore"
+        android:layout_width="67dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:background="@drawable/challenge_see_more_bg"
+        android:text="查看更多"
+        android:textColor="@color/base_text_3_color"
+        android:gravity="center"
+        android:textSize="@dimen/base_text_4_size"
+        />
+</FrameLayout>

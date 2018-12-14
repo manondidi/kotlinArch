@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+    >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tvSubscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/challenge_home_recomand_subcribe_bg"
+        android:gravity="center"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="已关注"
+        android:textColor="@color/base_text_2_color"
+        android:textSize="@dimen/base_text_4_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场刺激战场"
+        android:textColor="@color/base_text_1_color"
+        android:textSize="@dimen/base_text_2_size"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/ivIcon"
+        app:layout_constraintRight_toLeftOf="@id/tvSubscribe"
+        app:layout_constraintTop_toTopOf="@id/ivIcon"
+        />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="11dp"
+        android:text="共512位圈友,76个挑战"
+        android:textColor="@color/base_text_2_color"
+        android:textSize="@dimen/base_text_4_size"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintLeft_toRightOf="@id/ivIcon"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
