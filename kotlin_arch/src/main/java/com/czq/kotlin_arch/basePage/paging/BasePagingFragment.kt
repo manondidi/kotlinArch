@@ -3,18 +3,21 @@ package com.czq.kotlin_arch.basePage.paging
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.czq.kotlin_arch.R
-import com.czq.kotlin_arch.basePage.base.BaseActivity
+import com.czq.kotlin_arch.basePage.base.BaseFragment
 import com.czq.kotlin_arch.basePage.base.IBasePagingPrensenter
 import com.czq.kotlin_arch.basePage.base.IBasePagingView
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
 import com.scwang.smartrefresh.header.MaterialHeader
 import com.scwang.smartrefresh.layout.constant.RefreshState
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter
-import kotlinx.android.synthetic.main.activity_base_paging.*
+import kotlinx.android.synthetic.main.fragment_base_paging.*
 import me.drakeet.multitype.MultiTypeAdapter
 
-abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>(), IBasePagingView {
+abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>(), IBasePagingView {
+
     val multiAdapter: MultiTypeAdapter = MultiTypeAdapter()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         registItemBinder()
@@ -22,12 +25,11 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
 
     override fun initView() {
         super.initView()
-        title = "BasePagingActivity"
-        pagingRecycleview.layoutManager = LinearLayoutManager(this)
+        pagingRecycleview.layoutManager = LinearLayoutManager(context)
         pagingRecycleview.adapter = multiAdapter
         refreshLayout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);//全局设置主题颜色
-        refreshLayout.setRefreshHeader(MaterialHeader(this))
-        refreshLayout.setRefreshFooter(ClassicsFooter(this))
+        refreshLayout.setRefreshHeader(MaterialHeader(context))
+        refreshLayout.setRefreshFooter(ClassicsFooter(context))
         refreshLayout.setOnRefreshListener {
             mPresenter.resetPage()
             mPresenter.loadData()
@@ -92,8 +94,7 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
     }
 
     override fun setRecyclerViewData(datasource: ArrayList<Any>) {
-        multiAdapter.items=datasource
+        multiAdapter.items = datasource
         multiAdapter.notifyDataSetChanged()
     }
-
 }

@@ -44,7 +44,7 @@ class RemoteDataRepository {
 //        return mMockDataRepository.getUser()
     }
 
-    fun <T> getData(result: Result<T>): T {
+    fun <T> getData(result: Result<T>): T? {
         if (result.status != 0) {
             throw RuntimeException(result.msg)
         }

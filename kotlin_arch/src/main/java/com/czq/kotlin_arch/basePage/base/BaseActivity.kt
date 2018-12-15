@@ -66,19 +66,19 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
 
 
     override fun showContent() {
-        coverLayout.showContent()
+        coverLayout?.showContent()
     }
 
     override fun showLoading() {
-        coverLayout.showLoading()
+        coverLayout?.showLoading()
     }
 
     override fun showEmpty() {
-        coverLayout.showEmpty()
+        coverLayout?.showEmpty()
     }
 
     override fun showError(it: Throwable?) {
-        coverLayout.showError()
+        coverLayout?.showError()
         Logger.e(it, it?.message ?: "")
         Toasty.error(this, "${it?.message ?: "加载失败"}", Toast.LENGTH_SHORT, true).show()
     }

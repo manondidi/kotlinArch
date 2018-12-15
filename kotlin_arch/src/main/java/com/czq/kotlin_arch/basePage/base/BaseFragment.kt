@@ -48,22 +48,21 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
 
 
     override fun showContent() {
-        coverLayout.showContent()
+        coverLayout?.showContent()
     }
 
     override fun showLoading() {
-        coverLayout.showLoading()
+        coverLayout?.showLoading()
     }
 
     override fun showEmpty() {
-        coverLayout.showEmpty()
+        coverLayout?.showEmpty()
     }
 
     override fun showError(it: Throwable?) {
-        coverLayout.showError()
-        Toasty.error(context, "${it?.message?:"加载失败"}", Toast.LENGTH_SHORT, true).show()
+        coverLayout?.showError()
+        Toasty.error(context, "${it?.message ?: "加载失败"}", Toast.LENGTH_SHORT, true).show()
     }
-
 
 
     override fun autoDispose(): AndroidLifecycleScopeProvider {

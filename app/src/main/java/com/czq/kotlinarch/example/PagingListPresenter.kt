@@ -34,8 +34,8 @@ open class PagingListPresenter(mView: PagingListContact.PagingListView) : BasePa
                     datasource.clear()
                     pagingList.clear()
                 }
-                pagingList.addAll(it.listData)//用于计算分页的数据
-                it.listData.forEach {
+                pagingList.addAll(it?.listData?: arrayListOf())//用于计算分页的数据
+                it.listData?.forEach {
                     datasource.addAll(ChallengeRecomondCoverter.convert(it))//真实显示在列表上的数据
                 }
                 loadSuccess(it)
