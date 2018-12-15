@@ -6,9 +6,10 @@ import android.view.MenuItem
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
+import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
 import kotlinx.android.synthetic.main.activity_base.*
 
-abstract class BaseActivity<T:IBasePrensenter> : AppCompatActivity(), IBaseView {
+abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseView {
 
     open lateinit var mPresenter: T
 
@@ -20,17 +21,23 @@ abstract class BaseActivity<T:IBasePrensenter> : AppCompatActivity(), IBaseView 
         super.onCreate(savedInstanceState)
         if (!needTitle()) {
             requestWindowFeature(Window.FEATURE_NO_TITLE);
-        }else{
+        } else {
             getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         }
         setContentView(getLayoutId())
         initView()
         mPresenter = createPresenter()
+        lifecycle.addObserver(mPresenter)
         mPresenter.start()
     }
 
+
+    override fun autoDispose(): AndroidLifecycleScopeProvider {
+        return AndroidLifecycleScopeProvider.from(this)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if(item?.getItemId() == android.R.id.home){
+        if (item?.getItemId() == android.R.id.home) {
             onBackPressed()
         }
         return super.onOptionsItemSelected(item)

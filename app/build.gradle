@@ -56,4 +56,9 @@ dependencies {
     implementation 'jp.wasabeef:glide-transformations:4.0.1'
 
     implementation 'com.alibaba:fastjson:1.1.68.android'
+
+
+    implementation 'com.uber.autodispose:autodispose-android-archcomponents-ktx:1.1.0'
+    implementation 'com.uber.autodispose:autodispose:1.1.0'
+    implementation 'com.uber.autodispose:autodispose-lifecycle-ktx:1.1.0'
 }

@@ -4,7 +4,7 @@ import android.widget.Toast
 import com.czq.kotlin_arch.paging.PagingStrategy
 import es.dmoral.toasty.Toasty
 
-abstract class BasePagingPrensenterImpl(private val mView: IBasePagingView) : IBasePrensenter {
+abstract class BasePagingPrensenterImpl(val mView: IBasePagingView) : IBasePrensenter {
 
 
     val datasource = arrayListOf<Any>()
