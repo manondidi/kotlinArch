@@ -6,22 +6,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class CoverPresenter(var mView: CoverContact.CoverView) : CoverContact.CoverPrensenter {
-    val mRemoteDataRepository: RemoteDataRepository by lazy {
-        RemoteDataRepository()
-    }
 
     override fun start() {
 
-        mView.showLoading()
-        mRemoteDataRepository.getUser()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .autoDisposable(mView.autoDispose())
-            .subscribe({ it ->
-                mView.showContent()
-            }, {
-                mView.showError(it)
-            })
     }
 
 }

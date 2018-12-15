@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.czq.kotlinarch.example.CoverActivity
+import com.czq.kotlinarch.example.CoverFragmentActivity
 import com.czq.kotlinarch.example.NormalFragmentActivity
 import com.czq.kotlinarch.example.PagingListActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnFragmentBaseActivity.setOnClickListener {
-            startActivity(Intent(this@MainActivity, NormalFragmentActivity::class.java))
+            startActivity(Intent(this@MainActivity, CoverFragmentActivity::class.java))
         }
     }
 }
