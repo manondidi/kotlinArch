@@ -7,8 +7,6 @@ import com.czq.kotlin_arch.paging.normal.NormalPagingInfo
 import com.czq.kotlin_arch.paging.normal.NormalPagingStrategy
 import com.czq.kotlinarch.data.converter.ChallengeRecomondCoverter
 import com.czq.kotlinarch.data.remote.RemoteDataRepository
-import com.uber.autodispose.ScopeProvider
-import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
 import com.uber.autodispose.lifecycle.autoDisposable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
