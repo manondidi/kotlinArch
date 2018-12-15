@@ -61,4 +61,13 @@ dependencies {
     implementation 'com.uber.autodispose:autodispose-android-archcomponents-ktx:1.1.0'
     implementation 'com.uber.autodispose:autodispose:1.1.0'
     implementation 'com.uber.autodispose:autodispose-lifecycle-ktx:1.1.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+
+    implementation 'com.alibaba:fastjson:1.1.68.android'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    implementation 'com.orhanobut:logger:2.2.0'
+
 }

@@ -1,12 +1,10 @@
 package com.czq.kotlin_arch.basePage.base
 
-import com.czq.kotlin_arch.paging.PagingStrategy
-
-interface IBasePagingView:IBaseView {
+interface IBasePagingView : IBaseView {
 
     fun showRecyclerViewEmpty()
 
-    fun showRecyclerViewError()
+    fun showRecyclerViewError(it: Throwable? = null)
 
     fun showRecyclerViewContent()
 
@@ -23,7 +21,6 @@ interface IBasePagingView:IBaseView {
     fun isLoadingMore(): Boolean
 
     fun setRecyclerViewData(datasource: ArrayList<Any>)
-
 
 
 }

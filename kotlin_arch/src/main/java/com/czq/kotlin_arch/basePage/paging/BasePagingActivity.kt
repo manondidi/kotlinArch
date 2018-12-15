@@ -56,8 +56,8 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         showEmpty()
     }
 
-    override fun showRecyclerViewError() {
-        showError()
+    override fun showRecyclerViewError(it: Throwable?) {
+        showError(it)
     }
 
     override fun showRecyclerViewContent() {

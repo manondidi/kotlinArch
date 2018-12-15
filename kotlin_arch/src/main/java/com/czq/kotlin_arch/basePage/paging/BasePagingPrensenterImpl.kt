@@ -40,9 +40,7 @@ abstract class BasePagingPrensenterImpl(val mView: IBasePagingView) : IBasePrens
         }
 
         if (datasource.isEmpty()) {
-            mView?.showError()
-        } else {
-            Toasty.error(mView.getContext(), "加载失败${it.message}", Toast.LENGTH_SHORT, true).show()
+            mView?.showRecyclerViewError(it)
         }
     }
 

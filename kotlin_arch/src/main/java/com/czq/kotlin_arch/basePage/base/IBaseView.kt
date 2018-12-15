@@ -8,7 +8,7 @@ interface IBaseView {
     fun showContent()
     fun showLoading()
     fun showEmpty()
-    fun showError()
+    fun showError(it: Throwable? = null)
     fun getContext(): Context
     fun autoDispose(): AndroidLifecycleScopeProvider
 
