@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
+import com.hwangjr.rxbus.RxBus
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_base.*
@@ -25,10 +26,12 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
         return inflater.inflate(getLayoutId(), container, false)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         initView()
         mPresenter = createPresenter()
+        RxBus.get().register(mPresenter)
         lifecycle.addObserver(mPresenter)
         mPresenter.start()
     }
@@ -67,6 +70,12 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
 
     override fun autoDispose(): AndroidLifecycleScopeProvider {
         return AndroidLifecycleScopeProvider.from(this)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        lifecycle.removeObserver(mPresenter)
+        RxBus.get().unregister(mPresenter)
     }
 
 }

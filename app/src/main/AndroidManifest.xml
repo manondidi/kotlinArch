@@ -22,6 +22,9 @@
         </activity>
         <activity android:name=".example.CoverActivity"/>
         <activity android:name=".example.PagingListActivity"/>
+        <activity android:name=".example.NormalFragmentActivity"/>
+        <activity android:name=".example.CoverFragmentActivity"/>
+
     </application>
 
 </manifest>

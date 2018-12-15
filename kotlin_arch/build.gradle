@@ -59,4 +59,5 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.1.68.android'
 
     implementation 'com.orhanobut:logger:2.2.0'
+    implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
 }

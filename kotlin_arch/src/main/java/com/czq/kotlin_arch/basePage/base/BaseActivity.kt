@@ -7,6 +7,7 @@ import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
+import com.hwangjr.rxbus.RxBus
 import com.orhanobut.logger.Logger
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
 import es.dmoral.toasty.Toasty
@@ -31,6 +32,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
         initView()
         mPresenter = createPresenter()
         lifecycle.addObserver(mPresenter)
+        RxBus.get().register(mPresenter)
         mPresenter.start()
     }
 
@@ -84,4 +86,10 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
     }
 
 
+
+    override fun onDestroy() {
+        super.onDestroy()
+        lifecycle.removeObserver(mPresenter)
+        RxBus.get().unregister(mPresenter)
+    }
 }

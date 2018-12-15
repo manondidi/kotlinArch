@@ -22,4 +22,17 @@
             android:layout_height="wrap_content"
             />
 
+    <Button
+            android:id="@+id/btnFragmentActivity"
+            android:text="用普通activity:承载上述fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    <Button
+            android:id="@+id/btnFragmentBaseActivity"
+            android:text="用BaseActivity:承载上述fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 </LinearLayout>
