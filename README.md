@@ -36,9 +36,9 @@ kotlin开发脚手架
 
 
 
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/sc1.jpg)
+![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc1.jpg)
 
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/sc2.jpg)
+![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc2.jpg)
 
 
 
