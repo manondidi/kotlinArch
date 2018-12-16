@@ -1,5 +1,6 @@
 package com.czq.kotlinarch.example
 
+import android.annotation.SuppressLint
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
@@ -8,14 +9,15 @@ import com.czq.kotlin_arch.basePage.paging.BasePagingActivity
 import com.czq.kotlin_arch.common.util.DensityUtil
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.ChallengeRecommandItemVm
-import com.u17173.challenge.page.challenge.home.viewbinder.ChallengeViewbinder
-import com.u17173.challenge.page.challenge.home.viewbinder.CircleViewbinder
-import com.u17173.challenge.page.challenge.home.viewbinder.SeeMoreViewbinder
+import com.czq.kotlinarch.viewbinder.ChallengeViewbinder
+import com.czq.kotlinarch.viewbinder.CircleViewbinder
+import com.czq.kotlinarch.viewbinder.SeeMoreViewbinder
 import kotlinx.android.synthetic.main.activity_paging_list.*
 import me.drakeet.multitype.register
 
 class PagingListActivity : BasePagingActivity<PagingListPresenter>(), PagingListContact.PagingListView {
 
+    @SuppressLint("CheckResult")
     override fun registItemBinder() {
         multiAdapter.register(ChallengeViewbinder())
         multiAdapter.register(CircleViewbinder())

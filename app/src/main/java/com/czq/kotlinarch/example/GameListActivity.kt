@@ -6,8 +6,8 @@ import com.czq.kotlin_arch.basePage.paging.BasePagingActivity
 import com.czq.kotlin_arch.common.util.DensityUtil
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.GameDate
-import com.u17173.challenge.page.challenge.home.viewbinder.GameDateViewbinder
-import com.u17173.challenge.page.challenge.home.viewbinder.GameViewbinder
+import com.czq.kotlinarch.viewbinder.GameDateViewbinder
+import com.czq.kotlinarch.viewbinder.GameViewbinder
 import kotlinx.android.synthetic.main.activity_game_list.*
 import me.drakeet.multitype.register
 

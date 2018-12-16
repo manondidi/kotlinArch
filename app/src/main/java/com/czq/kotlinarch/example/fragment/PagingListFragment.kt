@@ -8,9 +8,9 @@ import com.czq.kotlin_arch.basePage.paging.BasePagingFragment
 import com.czq.kotlin_arch.common.util.DensityUtil
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.ChallengeRecommandItemVm
-import com.u17173.challenge.page.challenge.home.viewbinder.ChallengeViewbinder
-import com.u17173.challenge.page.challenge.home.viewbinder.CircleViewbinder
-import com.u17173.challenge.page.challenge.home.viewbinder.SeeMoreViewbinder
+import com.czq.kotlinarch.viewbinder.ChallengeViewbinder
+import com.czq.kotlinarch.viewbinder.CircleViewbinder
+import com.czq.kotlinarch.viewbinder.SeeMoreViewbinder
 import kotlinx.android.synthetic.main.fragment_paging_list.*
 import me.drakeet.multitype.register
 
