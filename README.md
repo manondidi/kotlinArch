@@ -1,21 +1,46 @@
 # kotlinArch
 kotlin开发脚手架
 
+开发模板 :https://github.com/manondidi/kotlinArchTemplate
+
 
 
 
 
 ##Todo
-- [ ] rxkotlin
+- [x] rxkotlin
 
-- [ ] mvp
+- [x] rxbus
 
-- [ ] databinding或viewmodel
+- [x] 页面destory rx自动取消
 
-- [ ] 策略模式的自动分页
+- [x] mvp
 
-- [ ] 各种cover封装
+- [ ] ~~databinding或viewmodel~~(业务层自己实现)
 
-- [ ] mock管理
+- [x] 策略模式的自动分页
+
+- [x] 各种cover封装
+
+- [x] 列表数据的解耦 itembinder
+
+- [x] mock管理
+
+- [x] 开发模板(自动生成代码)
+
+- [x] 详细案例
+
+- [ ] 发布到jcenter
 
   ......
+
+
+
+![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/sc1.jpg)
+
+![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/sc2.jpg)
+
+
+
+
+
