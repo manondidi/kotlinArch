@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_game_list.*
 import me.drakeet.multitype.register
 
 
-class GameListActivity : BasePagingActivity<GameListPresenter>(), GameListContact.PagingListView {
+class GameListActivity : BasePagingActivity<GameListContact.PagingListPresenter>(), GameListContact.PagingListView {
 
     val height by lazy {
         DensityUtil.dip2px(this, 40f) * 1f
@@ -51,7 +51,7 @@ class GameListActivity : BasePagingActivity<GameListPresenter>(), GameListContac
     }
 
 
-    override fun createPresenter(): GameListPresenter {
+    override fun createPresenter(): GameListContact.PagingListPresenter {
         return GameListPresenter(this)
     }
 

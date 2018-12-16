@@ -15,7 +15,7 @@ import com.czq.kotlinarch.viewbinder.SeeMoreViewbinder
 import kotlinx.android.synthetic.main.activity_paging_list.*
 import me.drakeet.multitype.register
 
-class PagingListActivity : BasePagingActivity<PagingListPresenter>(), PagingListContact.PagingListView {
+class PagingListActivity : BasePagingActivity<PagingListContact.PagingListPresenter>(), PagingListContact.PagingListView {
 
     @SuppressLint("CheckResult")
     override fun registItemBinder() {
@@ -24,7 +24,7 @@ class PagingListActivity : BasePagingActivity<PagingListPresenter>(), PagingList
         multiAdapter.register(SeeMoreViewbinder())
     }
 
-    override fun createPresenter(): PagingListPresenter {
+    override fun createPresenter(): PagingListContact.PagingListPresenter {
         return PagingListPresenter(this)
     }
 

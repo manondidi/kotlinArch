@@ -14,7 +14,7 @@ import com.czq.kotlinarch.viewbinder.SeeMoreViewbinder
 import kotlinx.android.synthetic.main.fragment_paging_list.*
 import me.drakeet.multitype.register
 
-class PagingListFragment : BasePagingFragment<PagingListPresenter>(), PagingListContact.PagingListView {
+class PagingListFragment : BasePagingFragment<PagingListContact.PagingListPresenter>(), PagingListContact.PagingListView {
 
     companion object {
         fun newInstance():PagingListFragment{
@@ -28,7 +28,7 @@ class PagingListFragment : BasePagingFragment<PagingListPresenter>(), PagingList
         multiAdapter.register(SeeMoreViewbinder())
     }
 
-    override fun createPresenter(): PagingListPresenter {
+    override fun createPresenter(): PagingListContact.PagingListPresenter {
         return PagingListPresenter(this)
     }
 
