@@ -25,6 +25,7 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         title = "BasePagingActivity"
         pagingRecycleview.layoutManager = LinearLayoutManager(this)
         pagingRecycleview.adapter = multiAdapter
+        showRecyclerViewLoading()
         refreshLayout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);//全局设置主题颜色
         refreshLayout.setRefreshHeader(MaterialHeader(this))
         refreshLayout.setRefreshFooter(ClassicsFooter(this))

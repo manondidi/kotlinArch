@@ -73,5 +73,14 @@ dependencies {
 
     implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
 
+    implementation('com.github.ihsanbal:LoggingInterceptor:3.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    //下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-16'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-16'//没有使用特殊Header，可以不加这行
+
+
 
 }

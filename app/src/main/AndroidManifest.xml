@@ -24,6 +24,7 @@
         <activity android:name=".example.PagingListActivity"/>
         <activity android:name=".example.NormalFragmentActivity"/>
         <activity android:name=".example.CoverFragmentActivity"/>
+        <activity android:name=".example.GameListActivity"/>
 
     </application>
 

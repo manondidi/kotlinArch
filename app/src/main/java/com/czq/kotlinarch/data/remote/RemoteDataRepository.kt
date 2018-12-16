@@ -1,12 +1,11 @@
 package com.czq.kotlinarch.data.remote
 
-import com.czq.kotlinarch.data.model.ChallengeRecomand
-import com.czq.kotlinarch.data.model.Page
-import com.czq.kotlinarch.data.model.Result
-import com.czq.kotlinarch.data.model.User
+import com.czq.kotlinarch.BuildConfig
+import com.czq.kotlinarch.data.model.*
 import com.czq.kotlinarch.data.remote.api.RemoteApi
 import io.reactivex.Observable
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.fastjson.FastJsonConverterFactory
@@ -17,9 +16,20 @@ class RemoteDataRepository {
     val mMockDataRepository = MockDataRepository()
 
     val okHttpClient by lazy {
+
+        val logging = HttpLoggingInterceptor()
+        if (BuildConfig.DEBUG) {
+            // development build
+            logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        } else {
+            // production build
+            logging.setLevel(HttpLoggingInterceptor.Level.BASIC);
+        }
+
         val client = OkHttpClient.Builder()
             .retryOnConnectionFailure(true)//连接失败后是否重新连接
             .connectTimeout(5, TimeUnit.SECONDS)//超时时间15S
+            .addInterceptor(logging)
             .build()
         client
     }
@@ -42,6 +52,11 @@ class RemoteDataRepository {
     fun getUser(): Observable<User> {
         return remoteApi.getUser("manondidi", "12345566").map { getData(it) }
 //        return mMockDataRepository.getUser()
+    }
+
+
+    fun getGames(pageNum: Int, pageSize: Int): Observable<Page<Game>> {
+        return remoteApi.getGames(pageNum, pageSize).map { getData(it) }
     }
 
     fun <T> getData(result: Result<T>): T? {

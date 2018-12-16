@@ -35,4 +35,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
+
+    <Button
+            android:id="@+id/btnGameList"
+            android:text="自动分页Activity gamelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 </LinearLayout>

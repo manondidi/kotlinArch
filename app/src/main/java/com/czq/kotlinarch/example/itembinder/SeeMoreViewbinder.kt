@@ -1,4 +1,4 @@
-package com.u17173.challenge.page.challenge.home.viewbinder
+package com.czq.kotlinarch.viewbinder
 
 import android.view.LayoutInflater
 import android.view.View

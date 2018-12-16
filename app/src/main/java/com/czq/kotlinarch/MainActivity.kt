@@ -3,10 +3,7 @@ package com.czq.kotlinarch
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.czq.kotlinarch.example.CoverActivity
-import com.czq.kotlinarch.example.CoverFragmentActivity
-import com.czq.kotlinarch.example.NormalFragmentActivity
-import com.czq.kotlinarch.example.PagingListActivity
+import com.czq.kotlinarch.example.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         btnFragmentBaseActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, CoverFragmentActivity::class.java))
+        }
+
+        btnGameList.setOnClickListener {
+            startActivity(Intent(this@MainActivity, GameListActivity::class.java))
         }
     }
 }
