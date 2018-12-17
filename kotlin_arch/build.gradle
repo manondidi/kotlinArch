@@ -65,12 +65,3 @@ dependencies {
     implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
 
 }
-
-publish {
-    userOrg = 'manondidi1992'
-    groupId = 'com.czq'
-    artifactId = 'kotlinArch'
-    publishVersion = '1.0.0'
-    desc = 'kotlin mvp 开发脚手架'
-    website = 'https://github.com/manondidi/kotlinArch'
-}
