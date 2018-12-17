@@ -7,13 +7,16 @@ kotlin开发脚手架
 安装
 
 ```
+
 allprojects {
     repositories {
         ...
-        maven { url "https://bintray.com/manondidi1992/maven" }
-        
+        maven { url "https://jitpack.io" }
+
+
     }
 }
+
 ```
 ```
 
