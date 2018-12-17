@@ -37,7 +37,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1-alpha01'
     implementation 'androidx.core:core-ktx:1.0.1'
 
-//    implementation project(path: ':kotlin_arch')
 
     implementation 'com.alibaba:fastjson:1.1.68.android'
 
@@ -84,6 +83,6 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-16'
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-16'//没有使用特殊Header，可以不加这行
 
-
-    implementation 'com.czq:kotlinArch:1.0.0'
+//    implementation 'com.github.manondidi:kotlinArch:1.0.0'
+    implementation project(path: ':kotlin_arch')
 }
