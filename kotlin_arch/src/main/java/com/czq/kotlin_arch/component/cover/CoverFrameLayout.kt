@@ -33,13 +33,10 @@ class CoverFrameLayout : FrameLayout {
             val lp = loadingView?.layoutParams
             this.addView(loadingView)
         }
-        children.forEach {
-            if (it != loadingView) {
-                it.visibility = View.GONE
-            } else {
-                it.visibility = View.VISIBLE
-            }
-        }
+        loadingView?.visibility=View.VISIBLE
+        emptyView?.visibility=View.GONE
+        errorView?.visibility=View.GONE
+
     }
 
     fun showEmpty() {
@@ -53,13 +50,10 @@ class CoverFrameLayout : FrameLayout {
             val lp = emptyView?.layoutParams
             this.addView(emptyView)
         }
-        children.forEach {
-            if (it != emptyView) {
-                it.visibility = View.GONE
-            } else {
-                it.visibility = View.VISIBLE
-            }
-        }
+
+        emptyView?.visibility=View.VISIBLE
+        loadingView?.visibility=View.GONE
+        errorView?.visibility=View.GONE
     }
 
     fun showError() {
@@ -73,23 +67,16 @@ class CoverFrameLayout : FrameLayout {
             val lp = errorView?.layoutParams
             this.addView(errorView)
         }
-        children.forEach {
-            if (it != errorView) {
-                it.visibility = View.GONE
-            } else {
-                it.visibility = View.VISIBLE
-            }
-        }
+
+        errorView?.visibility=View.VISIBLE
+        loadingView?.visibility=View.GONE
+        emptyView?.visibility=View.GONE
     }
 
     fun showContent() {
-        children.forEach {
-            if (it == emptyView || it == loadingView || it == errorView) {
-                it.visibility = View.GONE
-            } else {
-                it.visibility = View.VISIBLE
-            }
-        }
+        errorView?.visibility=View.GONE
+        loadingView?.visibility=View.GONE
+        emptyView?.visibility=View.GONE
     }
 
     fun doReload() {

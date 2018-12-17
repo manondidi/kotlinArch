@@ -48,7 +48,6 @@ abstract class BasePagingPrensenterImpl(val mView: IBasePagingView) : IBasePrens
         val isFinish = mPagingStrategy?.checkFinish(resultData, pagingList.size) ?: true
         if (mView.isRefreshing()) {
             mView.stopRefresh()
-            mView.stopLoadingdMore(isFinish)
         }
         mView.stopLoadingdMore(isFinish)
         if (datasource.isEmpty()) {
