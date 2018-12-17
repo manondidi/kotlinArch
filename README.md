@@ -4,6 +4,21 @@ kotlin开发脚手架
 开发模板 :https://github.com/manondidi/kotlinArchTemplate
 
 
+安装
+
+```
+allprojects {
+    repositories {
+        ...
+        maven { url "https://bintray.com/manondidi1992/maven" }
+        
+    }
+}
+```
+```
+
+implementation 'com.czq:kotlinArch:1.0.0'
+```
 
 
 
