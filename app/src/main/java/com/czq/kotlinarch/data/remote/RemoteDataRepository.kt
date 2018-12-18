@@ -63,6 +63,10 @@ class RemoteDataRepository {
         return remoteApi.getArticleFeeds(pageSize, offsetId, direction).map { getData(it) }
     }
 
+    fun getBanners(): Observable<List<Banner>> {
+        return mMockDataRepository.getBanners()
+    }
+
     fun <T> getData(result: Result<T>): T? {
         if (result.status != 0) {
             throw RuntimeException(result.msg)

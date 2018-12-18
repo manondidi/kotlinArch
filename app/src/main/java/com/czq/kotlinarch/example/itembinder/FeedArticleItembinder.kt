@@ -36,48 +36,14 @@ class FeedArticleItembinder : ItemViewBinder<FeedArticle, FeedArticleItembinder.
         itemView.tvI.visibility = if (isFirefly) {
             View.VISIBLE
         } else {
-            View.INVISIBLE
+            View.GONE
         }
         itemView.tvFrom.visibility = if (isFirefly) {
             View.VISIBLE
         } else {
-            View.INVISIBLE
+            View.GONE
         }
-
-        val lp: ConstraintLayout.LayoutParams = itemView.ivCover.layoutParams as ConstraintLayout.LayoutParams
-        lp.topMargin = if (isFirefly) {
-            DensityUtil.dip2px(itemView.context, 36f)
-        } else {
-            DensityUtil.dip2px(itemView.context, 15f)
-        }
-
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {}
-
-
 }
-//self.imgAvatar.layer.cornerRadius=15/2.0
-//self.imgAvatar.layer.masksToBounds=true
-//self.imgAvatar.kf.setImage(with:URL(string: (model?.user?.avatar)!))
-//self.imgCover.kf.setImage(with:URL(string: (model?.payload?.article?.cover?.medium)!))
-//self.labelTitle.text=model?.payload?.article?.title
-//self.labelUserName.text=model?.user?.nickname
-//self.labelGameName.text=model?.payload?.article?.game?.name ?? ""
-//
-//
-//
-//let isFirefly=model?.payload?.article?.isFireflyUser ?? false
-//
-//labelFlyIcon.isHidden = !isFirefly
-//labelFlyText.isHidden = !isFirefly
-//if(isFirefly ){
-//    imgCover.snp.updateConstraints { (make) in
-//            make.top.equalToSuperview().offset(36.0)
-//    }
-//
-//}else{
-//    imgCover.snp.updateConstraints { (make) in
-//            make.top.equalToSuperview().offset(15.0)
-//    }
-//}

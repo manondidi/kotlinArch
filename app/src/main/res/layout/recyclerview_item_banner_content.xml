@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:riv_corner_radius="10dp" />
+
+    <ImageView
+        android:id="@+id/ivFirefly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/icon_firefly"
+        app:layout_constraintRight_toRightOf="@id/ivCover"
+        app:layout_constraintTop_toTopOf="@id/ivCover" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        android:text="文字文字文字"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintLeft_toLeftOf="@id/ivCover"
+        app:layout_constraintRight_toRightOf="@id/ivCover" />
+
+
+    <TextView
+        android:id="@+id/tvGameDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:lines="2"
+        android:text="文字文字文字"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintLeft_toLeftOf="@id/ivCover"
+        app:layout_constraintRight_toRightOf="@id/ivCover" />
+
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:maxLength="12"
+        android:singleLine="true"
+        android:text="字文字文文字文字文字文字文文字文字文字文字文文字文字文字文字文 文字"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvGameDesc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/tvGameDesc"
+        app:layout_constraintRight_toRightOf="@id/tvGameDesc" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:riv_corner_radius="10dp"
+        android:src="@drawable/banner_gray_mask" />
+</androidx.constraintlayout.widget.ConstraintLayout>
