@@ -7,7 +7,12 @@
         android:orientation="vertical"
         tools:context=".MainActivity"
         >
-
+    <Button
+        android:id="@+id/btnBasePageNoCover"
+        android:text="basePage:不带 cover的activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <Button
             android:id="@+id/btnBasePage"
             android:text="basePage:带各种cover的activity"

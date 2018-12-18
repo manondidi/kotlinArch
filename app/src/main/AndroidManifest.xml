@@ -23,10 +23,8 @@
         <activity android:name=".example.NormalFragmentActivity"/>
         <activity android:name=".example.CoverFragmentActivity"/>
         <activity android:name=".example.GameListActivity"/>
-        <activity android:name=".example.FeedArticleActivity">
-        </activity>
-        <activity android:name=".example.XXXActivity">
-        </activity>
+        <activity android:name=".example.FeedArticleActivity"/>
+        <activity android:name=".example.NoCoverActivity"/>
     </application>
 
 </manifest>

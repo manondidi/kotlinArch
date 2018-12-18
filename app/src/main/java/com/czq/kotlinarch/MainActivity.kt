@@ -10,6 +10,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        btnBasePageNoCover.setOnClickListener {
+            startActivity(Intent(this@MainActivity,NoCoverActivity::class.java))
+        }
+
         btnBasePage.setOnClickListener {
             startActivity(Intent(this@MainActivity,CoverActivity::class.java))
         }
