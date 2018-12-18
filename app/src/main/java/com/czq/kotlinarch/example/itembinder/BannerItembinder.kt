@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.BannerList
-import github.hellocsl.layoutmanager.gallery.GalleryLayoutManager
+import com.czq.kotlinarch.example.component.GalleryLayoutManager
 import kotlinx.android.synthetic.main.recyclerview_item_banner.view.*
 import me.drakeet.multitype.ItemViewBinder
 import me.drakeet.multitype.MultiTypeAdapter

@@ -25,25 +25,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    packagingOptions {
 
-
-        pickFirst 'lib/x86/libRSSupport.so'
-        pickFirst 'lib/arm64-v8a/libRSSupport.so'
-        pickFirst 'lib/armeabi-v7a/libRSSupport.so'
-        pickFirst 'lib/x86_64/libRSSupport.so'
-
-        pickFirst 'lib/x86/librsjni_androidx.so'
-        pickFirst 'lib/arm64-v8a/librsjni_androidx.so'
-        pickFirst 'lib/armeabi-v7a/librsjni_androidx.so'
-        pickFirst 'lib/x86_64/librsjni_androidx.so'
-
-        pickFirst 'lib/x86/librsjni.so'
-        pickFirst 'lib/arm64-v8a/librsjni.so'
-        pickFirst 'lib/armeabi-v7a/librsjni.so'
-        pickFirst 'lib/x86_64/librsjni.so'
-
-    }
 }
 
 dependencies {
@@ -55,50 +37,28 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1-alpha01'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1-alpha01'
     implementation 'androidx.core:core-ktx:1.0.1'
-
-
     implementation 'com.alibaba:fastjson:1.1.68.android'
-
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
-
-
     implementation 'com.makeramen:roundedimageview:2.3.0'
-
-
-
     implementation 'me.drakeet.multitype:multitype:3.5.0'
     implementation 'me.drakeet.multitype:multitype-ktx:3.5.0'
-
-
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
-
     implementation 'jp.wasabeef:glide-transformations:4.0.1'
-
-    implementation 'com.alibaba:fastjson:1.1.68.android'
-
-
     implementation 'com.uber.autodispose:autodispose-android-archcomponents-ktx:1.1.0'
     implementation 'com.uber.autodispose:autodispose:1.1.0'
     implementation 'com.uber.autodispose:autodispose-lifecycle-ktx:1.1.0'
-
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
-
-    implementation 'com.alibaba:fastjson:1.1.68.android'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
-
     implementation 'com.orhanobut:logger:2.2.0'
-
     implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
-
     implementation('com.github.ihsanbal:LoggingInterceptor:3.0.0') {
         exclude group: 'org.json', module: 'json'
     }
 
-    implementation 'com.github.manondidi:GalleryLayoutManager:v1.0.7'
 
     //下拉刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-16'
