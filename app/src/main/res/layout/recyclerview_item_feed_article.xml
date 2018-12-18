@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:text="|"
+        android:textColor="#fbbe17"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="本文来自 萤火虫"
+        android:textColor="#1c1c1c"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvI"
+        app:layout_constraintLeft_toRightOf="@id/tvI"
+        app:layout_constraintTop_toTopOf="@id/tvI" />
+
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="107dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="23dp"
+        android:background="#cccccc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="31dp"
+        android:lines="2"
+        android:text="文章标题文章标题文章标题文章标题文章标题文章标题文章标题文章标题文章标题文章标题文章标题文章标题文章标题"
+        android:textColor="#1c1c1c"
+        android:textSize="17dp"
+        app:layout_constraintLeft_toLeftOf="@id/tvI"
+        app:layout_constraintRight_toLeftOf="@id/ivCover"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#f3f3f3"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="用户名"
+        android:textColor="#1c1c1c"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+        app:layout_constraintLeft_toRightOf="@id/ivAvatar"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+
+    <TextView
+        android:id="@+id/tvBottomI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="|"
+        android:textColor="#1c1c1c"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+        app:layout_constraintLeft_toRightOf="@id/tvUserName"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+
+
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="游戏名称"
+        android:textColor="#1c1c1c"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+        app:layout_constraintLeft_toRightOf="@id/tvBottomI"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

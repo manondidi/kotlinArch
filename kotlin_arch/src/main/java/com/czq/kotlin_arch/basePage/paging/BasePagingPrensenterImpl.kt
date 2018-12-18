@@ -56,7 +56,7 @@ abstract class BasePagingPrensenterImpl(val mView: IBasePagingView) : IBasePrens
             mView?.setRecyclerViewData(datasource)
             mView?.showRecyclerViewContent()
         }
-        mPagingStrategy?.addPage(null)
+        mPagingStrategy?.addPage(resultData)
     }
 
 

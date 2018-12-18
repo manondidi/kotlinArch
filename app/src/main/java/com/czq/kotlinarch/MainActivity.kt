@@ -28,5 +28,9 @@ class MainActivity : AppCompatActivity() {
         btnGameList.setOnClickListener {
             startActivity(Intent(this@MainActivity, GameListActivity::class.java))
         }
+
+        btnFeedArticle.setOnClickListener {
+            startActivity(Intent(this@MainActivity, FeedArticleActivity::class.java))
+        }
     }
 }

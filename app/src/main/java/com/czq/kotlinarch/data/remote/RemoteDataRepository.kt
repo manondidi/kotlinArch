@@ -27,19 +27,19 @@ class RemoteDataRepository {
         }
 
         val client = OkHttpClient.Builder()
-            .retryOnConnectionFailure(true)//连接失败后是否重新连接
-            .connectTimeout(5, TimeUnit.SECONDS)//超时时间15S
-            .addInterceptor(logging)
-            .build()
+                .retryOnConnectionFailure(true)//连接失败后是否重新连接
+                .connectTimeout(5, TimeUnit.SECONDS)//超时时间15S
+                .addInterceptor(logging)
+                .build()
         client
     }
     val retrofit by lazy {
         Retrofit.Builder()
-            .client(okHttpClient)
-            .baseUrl("http://47.98.129.57:8080/info-admin-web/")
-            .addConverterFactory(FastJsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
+                .client(okHttpClient)
+                .baseUrl("http://47.98.129.57:8080/info-admin-web/")
+                .addConverterFactory(FastJsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .build()
     }
 
     val remoteApi: RemoteApi by lazy { retrofit.create(RemoteApi::class.java!!) }
@@ -57,6 +57,10 @@ class RemoteDataRepository {
 
     fun getGames(pageNum: Int, pageSize: Int): Observable<Page<Game>> {
         return remoteApi.getGames(pageNum, pageSize).map { getData(it) }
+    }
+
+    fun getFeedArticles(pageSize: Int, offsetId: String?, direction: String): Observable<List<FeedArticle>> {
+        return remoteApi.getArticleFeeds(pageSize, offsetId, direction).map { getData(it) }
     }
 
     fun <T> getData(result: Result<T>): T? {

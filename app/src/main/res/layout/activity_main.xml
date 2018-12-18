@@ -42,4 +42,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
+
+    <Button
+        android:id="@+id/btnFeedArticle"
+        android:text="自动分页Activity  offsetId分页策略"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>

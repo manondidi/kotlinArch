@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.czq.kotlinarch"
-        >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.czq.kotlinarch">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,8 +10,7 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme"
-            >
+            android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -26,7 +23,9 @@
         <activity android:name=".example.NormalFragmentActivity"/>
         <activity android:name=".example.CoverFragmentActivity"/>
         <activity android:name=".example.GameListActivity"/>
-        <activity android:name=".example.XxxActivity">
+        <activity android:name=".example.FeedArticleActivity">
+        </activity>
+        <activity android:name=".example.XXXActivity">
         </activity>
     </application>
 

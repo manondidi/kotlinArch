@@ -1,5 +1,6 @@
 package com.czq.kotlinarch.example
 
+import android.graphics.Color
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,8 @@ import com.czq.kotlinarch.viewbinder.GameDateViewbinder
 import com.czq.kotlinarch.viewbinder.GameViewbinder
 import com.scwang.smartrefresh.layout.api.RefreshHeader
 import com.scwang.smartrefresh.layout.constant.RefreshState
+import com.scwang.smartrefresh.layout.header.BezierRadarHeader
+import com.scwang.smartrefresh.layout.header.ClassicsHeader
 import com.scwang.smartrefresh.layout.listener.SimpleMultiPurposeListener
 import kotlinx.android.synthetic.main.activity_game_list.*
 import kotlinx.android.synthetic.main.game_item_date.view.*
@@ -29,6 +32,8 @@ class GameListActivity : BasePagingActivity<GameListContact.PagingListPresenter>
         super.initView()
 
         preparStickyView()
+
+        refreshLayout.setRefreshHeader(BezierRadarHeader(this))
 
         pagingRecycleview.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
