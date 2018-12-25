@@ -20,7 +20,7 @@ allprojects {
 ```
 ```
 
-implementation 'com.github.manondidi:kotlinArch:1.0.2'
+implementation 'com.github.manondidi:kotlinArch:xxx'
 ```
 
 
