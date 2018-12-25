@@ -1,4 +1,4 @@
-# kotlinArch
+# kotlinArch[![](https://jitpack.io/v/manondidi/kotlinArch.svg)](https://jitpack.io/#manondidi/kotlinArch)
 kotlin开发脚手架
 
 开发模板 :https://github.com/manondidi/kotlinArchTemplate
