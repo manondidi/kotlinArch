@@ -6,7 +6,7 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.czq.kotlin_arch.basePage.paging.BasePagingActivity
-import com.czq.kotlin_arch.common.util.DensityUtil
+import com.czq.kotlin_arch.common.util.ext.dp
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.ChallengeRecommandItemVm
 import com.czq.kotlinarch.viewbinder.ChallengeViewbinder
@@ -15,7 +15,8 @@ import com.czq.kotlinarch.viewbinder.SeeMoreViewbinder
 import kotlinx.android.synthetic.main.activity_paging_list.*
 import me.drakeet.multitype.register
 
-class PagingListActivity : BasePagingActivity<PagingListContact.PagingListPresenter>(), PagingListContact.PagingListView {
+class PagingListActivity : BasePagingActivity<PagingListContact.PagingListPresenter>(),
+    PagingListContact.PagingListView {
 
     @SuppressLint("CheckResult")
     override fun registItemBinder() {
@@ -34,7 +35,7 @@ class PagingListActivity : BasePagingActivity<PagingListContact.PagingListPresen
 
     override fun initView() {
         super.initView()
-        val layoutManager = GridLayoutManager(this,2)
+        val layoutManager = GridLayoutManager(this, 2)
         layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
                 if (multiAdapter.items[position] is ChallengeRecommandItemVm)
@@ -44,7 +45,7 @@ class PagingListActivity : BasePagingActivity<PagingListContact.PagingListPresen
                 }
             }
         }
-        pagingRecycleview.layoutManager=layoutManager
+        pagingRecycleview.layoutManager = layoutManager
         pagingRecycleview.addItemDecoration(SpaceItemDecoration())//为了弄间距
     }
 
@@ -56,11 +57,11 @@ class PagingListActivity : BasePagingActivity<PagingListContact.PagingListPresen
             if (multiAdapter.items[position] is ChallengeRecommandItemVm) {
                 val item = multiAdapter.items[position] as ChallengeRecommandItemVm
                 if (item.index % 2 == 0) {
-                    outRect?.left = DensityUtil.dip2px(getContext(),15f)
-                    outRect?.right = DensityUtil.dip2px(getContext(),5f)
+                    outRect?.left = 15.dp
+                    outRect?.right = 5.dp
                 } else {
-                    outRect?.left = DensityUtil.dip2px(getContext(),5f)
-                    outRect?.right = DensityUtil.dip2px(getContext(),15f)
+                    outRect?.left = 5.dp
+                    outRect?.right = 15.dp
                 }
             } else {
                 outRect?.left = 0

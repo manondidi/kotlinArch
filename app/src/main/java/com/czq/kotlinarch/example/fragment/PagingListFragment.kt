@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.czq.kotlin_arch.basePage.paging.BasePagingFragment
-import com.czq.kotlin_arch.common.util.DensityUtil
+import com.czq.kotlin_arch.common.util.ext.dp
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.ChallengeRecommandItemVm
 import com.czq.kotlinarch.viewbinder.ChallengeViewbinder
@@ -60,11 +60,11 @@ class PagingListFragment : BasePagingFragment<PagingListContact.PagingListPresen
             if (multiAdapter.items[position] is ChallengeRecommandItemVm) {
                 val item = multiAdapter.items[position] as ChallengeRecommandItemVm
                 if (item.index % 2 == 0) {
-                    outRect?.left = DensityUtil.dip2px(getContext(),15f)
-                    outRect?.right = DensityUtil.dip2px(getContext(),5f)
+                    outRect?.left = 15.dp
+                    outRect?.right = 5.dp
                 } else {
-                    outRect?.left = DensityUtil.dip2px(getContext(),5f)
-                    outRect?.right = DensityUtil.dip2px(getContext(),15f)
+                    outRect?.left = 5.dp
+                    outRect?.right = 15.dp
                 }
             } else {
                 outRect?.left = 0
