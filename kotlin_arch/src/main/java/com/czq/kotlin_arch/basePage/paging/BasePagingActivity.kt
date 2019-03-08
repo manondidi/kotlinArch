@@ -36,11 +36,8 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         refreshLayout.setOnLoadMoreListener {
             mPresenter.loadData()
         }
-
-        coverLayout?.coverFrameListener = object : CoverFrameLayout.CoverFrameListener {
-            override fun onReload() {
-                refreshLayout.autoRefresh()
-            }
+        coverLayout?.doReload = {
+            refreshLayout.autoRefresh()
         }
     }
 

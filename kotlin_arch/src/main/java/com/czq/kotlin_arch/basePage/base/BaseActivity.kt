@@ -58,10 +58,8 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
 
     open fun initView() {
         title = "BaseActivity"
-        coverLayout?.coverFrameListener = object : CoverFrameLayout.CoverFrameListener {
-            override fun onReload() {
-                mPresenter?.start()
-            }
+        coverLayout?.doReload = {
+            mPresenter?.start()
         }
 
     }

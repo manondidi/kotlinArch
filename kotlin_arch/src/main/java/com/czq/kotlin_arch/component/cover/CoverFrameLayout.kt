@@ -15,7 +15,7 @@ class CoverFrameLayout : FrameLayout {
     var emptyView: View? = null
     var errorView: View? = null
     val inflater by lazy { LayoutInflater.from(context) }
-    var coverFrameListener: CoverFrameListener? = null
+    var doReload: (() -> Unit)? = null
 
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
@@ -33,9 +33,9 @@ class CoverFrameLayout : FrameLayout {
             val lp = loadingView?.layoutParams
             this.addView(loadingView)
         }
-        loadingView?.visibility=View.VISIBLE
-        emptyView?.visibility=View.GONE
-        errorView?.visibility=View.GONE
+        loadingView?.visibility = View.VISIBLE
+        emptyView?.visibility = View.GONE
+        errorView?.visibility = View.GONE
 
     }
 
@@ -43,7 +43,7 @@ class CoverFrameLayout : FrameLayout {
         if (emptyView == null) {
             emptyView = inflater.inflate(R.layout.common_empty_view, null)
             emptyView?.setOnClickListener {
-                doReload()
+                reload()
             }
         }
         if (emptyView?.parent == null) {
@@ -51,16 +51,16 @@ class CoverFrameLayout : FrameLayout {
             this.addView(emptyView)
         }
 
-        emptyView?.visibility=View.VISIBLE
-        loadingView?.visibility=View.GONE
-        errorView?.visibility=View.GONE
+        emptyView?.visibility = View.VISIBLE
+        loadingView?.visibility = View.GONE
+        errorView?.visibility = View.GONE
     }
 
     fun showError() {
         if (errorView == null) {
             errorView = inflater.inflate(R.layout.common_error_view, null)
             errorView?.btnRetry?.setOnClickListener {
-                doReload()
+                reload()
             }
         }
         if (errorView?.parent == null) {
@@ -68,19 +68,19 @@ class CoverFrameLayout : FrameLayout {
             this.addView(errorView)
         }
 
-        errorView?.visibility=View.VISIBLE
-        loadingView?.visibility=View.GONE
-        emptyView?.visibility=View.GONE
+        errorView?.visibility = View.VISIBLE
+        loadingView?.visibility = View.GONE
+        emptyView?.visibility = View.GONE
     }
 
     fun showContent() {
-        errorView?.visibility=View.GONE
-        loadingView?.visibility=View.GONE
-        emptyView?.visibility=View.GONE
+        errorView?.visibility = View.GONE
+        loadingView?.visibility = View.GONE
+        emptyView?.visibility = View.GONE
     }
 
-    fun doReload() {
+    fun reload() {
         showLoading()
-        coverFrameListener?.onReload()
+        doReload?.invoke()
     }
 }
