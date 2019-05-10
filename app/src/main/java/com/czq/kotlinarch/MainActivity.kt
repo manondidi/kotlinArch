@@ -36,5 +36,10 @@ class MainActivity : AppCompatActivity() {
         btnFeedArticle.setOnClickListener {
             startActivity(Intent(this@MainActivity, FeedArticleActivity::class.java))
         }
+
+        btnDatabinding.setOnClickListener {
+            startActivity(Intent(this@MainActivity, DatabindingActivity::class.java))
+
+        }
     }
 }

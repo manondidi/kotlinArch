@@ -8,7 +8,7 @@ class OffsetStrategy(pageSize: Int = 20, offsetIdKey: String) : PagingStrategy {
     var offsetIdKey = ""
 
     init {
-        pageInfo.pageSize = 20
+        pageInfo.pageSize = pageSize
         this.offsetIdKey = offsetIdKey
         this.pageInfo.type = "new"
     }

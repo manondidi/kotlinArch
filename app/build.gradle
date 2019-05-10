@@ -6,6 +6,9 @@ apply plugin: 'kotlin-android-extensions'
 
 
 android {
+    dataBinding {
+        enabled = true
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.czq.kotlinarch"
@@ -65,6 +68,6 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-16'//没有使用特殊Header，可以不加这行
 
     implementation project(path: ':kotlin_arch')
-
+    kapt 'androidx.databinding:databinding-compiler:3.2.1'
 
 }

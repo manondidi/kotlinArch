@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.czq.kotlin_arch">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application>
-        <activity android:name=".basePage.base.BaseActivity">
-        </activity>
     </application>
 
 </manifest>

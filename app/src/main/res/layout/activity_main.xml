@@ -6,52 +6,58 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity"
-        >
+>
     <Button
-        android:id="@+id/btnBasePageNoCover"
-        android:text="basePage:不带 cover的activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+            android:id="@+id/btnBasePageNoCover"
+            android:text="basePage:不带 cover的activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    />
     <Button
             android:id="@+id/btnBasePage"
             android:text="basePage:带各种cover的activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+    />
 
     <Button
             android:id="@+id/btnPagingList"
             android:text="pagingList:自动分页的recyclerview activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+    />
 
     <Button
             android:id="@+id/btnFragmentActivity"
             android:text="用普通activity:承载上述fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+    />
 
     <Button
             android:id="@+id/btnFragmentBaseActivity"
             android:text="用BaseActivity:承载上述fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+    />
 
     <Button
             android:id="@+id/btnGameList"
             android:text="自动分页Activity gamelist 悬停方案"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+    />
+    <Button
+            android:id="@+id/btnDatabinding"
+            android:text="Databinding接入"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    />
 
     <Button
-        android:id="@+id/btnFeedArticle"
-        android:text="自动分页Activity  offsetId分页策略"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+            android:id="@+id/btnFeedArticle"
+            android:text="自动分页Activity  offsetId分页策略"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    />
 </LinearLayout>

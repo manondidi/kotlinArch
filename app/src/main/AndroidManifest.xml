@@ -11,6 +11,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".example.DatabindingActivity">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,6 +27,7 @@
         <activity android:name=".example.GameListActivity"/>
         <activity android:name=".example.FeedArticleActivity"/>
         <activity android:name=".example.NoCoverActivity"/>
+        <activity android:name=".example.DatabindingActivity"/>
     </application>
 
 </manifest>

@@ -47,7 +47,7 @@ class CoverFrameLayout : FrameLayout {
             }
         }
         if (emptyView?.parent == null) {
-            val lp = emptyView?.layoutParams
+//            val lp = emptyView?.layoutParams
             this.addView(emptyView)
         }
 

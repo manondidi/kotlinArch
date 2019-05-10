@@ -28,7 +28,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
         } else {
             getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         }
-        setContentView(getLayoutId())
+        initContentView()
         initView()
         mPresenter = createPresenter()
         lifecycle.addObserver(mPresenter)
@@ -55,6 +55,10 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
     abstract fun createPresenter(): T
 
     abstract fun getLayoutId(): Int
+
+    open fun initContentView(){
+        setContentView(getLayoutId())
+    }
 
     open fun initView() {
         title = "BaseActivity"
