@@ -2,6 +2,7 @@ package com.czq.kotlinarch.example
 
 
 import android.annotation.SuppressLint
+import android.widget.Toast
 import com.czq.kotlin_arch.basePage.base.BasePagingPrensenterImpl
 import com.czq.kotlin_arch.paging.PagingStrategy
 import com.czq.kotlin_arch.paging.offset.OffsetPageInfo
@@ -14,6 +15,9 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
+import com.hwangjr.rxbus.thread.EventThread
+import com.hwangjr.rxbus.annotation.Subscribe
+import com.hwangjr.rxbus.annotation.Tag
 
 
 class FeedArticlePresenter(mView: FeedArticleContract.IView) : BasePagingPrensenterImpl(mView),
@@ -85,5 +89,10 @@ class FeedArticlePresenter(mView: FeedArticleContract.IView) : BasePagingPrensen
 
     fun getFeedArticle(pageSize: Int, offsetId: String?, direction: String): Observable<List<FeedArticle>> {
         return mRemoteDataRepository.getFeedArticles(pageSize, offsetId, direction)
+    }
+
+    @Subscribe(thread = EventThread.MAIN_THREAD, tags = [Tag("hi")])
+    fun hi(str:String) {
+        Toast.makeText(mView.getContext(),"hi",Toast.LENGTH_LONG).show()
     }
 }
