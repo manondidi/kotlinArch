@@ -47,6 +47,7 @@ class App : Application() {
                 return ClassicsFooter(context).setDrawableSize(20f)
             }
         })
+        //这里可以配置全局loadingview emptyview errorview的布局
         CoverFrameViewConfig.defaultLoadingViewLayout = R.layout.custom_loading_view
 
     }
