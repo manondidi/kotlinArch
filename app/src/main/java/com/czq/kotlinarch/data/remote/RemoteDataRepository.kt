@@ -13,9 +13,9 @@ import java.util.concurrent.TimeUnit
 
 
 class RemoteDataRepository {
-    val mMockDataRepository = MockDataRepository()
+    private val mMockDataRepository = MockDataRepository()
 
-    val okHttpClient by lazy {
+    private val okHttpClient: OkHttpClient by lazy {
 
         val logging = HttpLoggingInterceptor()
         if (BuildConfig.DEBUG) {
@@ -33,7 +33,7 @@ class RemoteDataRepository {
                 .build()
         client
     }
-    val retrofit by lazy {
+    private val retrofit by lazy {
         Retrofit.Builder()
                 .client(okHttpClient)
                 .baseUrl("http://47.98.129.57:8080/info-admin-web/")
@@ -42,7 +42,7 @@ class RemoteDataRepository {
                 .build()
     }
 
-    val remoteApi: RemoteApi by lazy { retrofit.create(RemoteApi::class.java!!) }
+    private val remoteApi: RemoteApi by lazy { retrofit.create(RemoteApi::class.java!!) }
 
 
     fun getChallengeRecommond(pageNo: Int, pageSize: Int): Observable<Page<ChallengeRecomand>> {

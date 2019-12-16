@@ -8,20 +8,17 @@ class MockUtil {
     companion object {
         inline fun <reified T> getMockModelList(context: Context, fileName: String, clazz: Class<T> ): List<T> {
             val jsonStr = AssetUtil.getStringFromFile(context, fileName)
-            val parseArray = JSON.parseArray(jsonStr,clazz)
-            return parseArray
+            return JSON.parseArray(jsonStr,clazz)
         }
 
         inline fun <reified T> getMockModel(context: Context, fileName: String, clazz: Class<T> ): T {
             val jsonStr = AssetUtil.getStringFromFile(context, fileName)
-            val parseObject = JSON.parseObject(jsonStr,clazz)
-            return parseObject
+            return JSON.parseObject(jsonStr,clazz)
         }
 
         inline fun <reified T> getMockModel(context: Context, fileName: String, typeReference: TypeReference<T> ): T {
             val jsonStr = AssetUtil.getStringFromFile(context, fileName)
-            val parseObject = JSON.parseObject(jsonStr,typeReference)
-            return parseObject
+            return JSON.parseObject(jsonStr,typeReference)
         }
     }
 }

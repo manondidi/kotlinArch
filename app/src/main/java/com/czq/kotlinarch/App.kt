@@ -12,6 +12,7 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader
 import com.scwang.smartrefresh.layout.api.RefreshHeader
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator
 import android.content.Context
+import com.czq.kotlin_arch.component.cover.CoverFrameViewConfig
 
 
 class App : Application() {
@@ -28,18 +29,25 @@ class App : Application() {
             }
         })
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(object : DefaultRefreshHeaderCreator {
-            override fun createRefreshHeader(context: Context, layout: RefreshLayout): RefreshHeader {
+            override fun createRefreshHeader(
+                context: Context,
+                layout: RefreshLayout
+            ): RefreshHeader {
                 layout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white)//全局设置主题颜色
                 return ClassicsHeader(context)//.setTimeFormat(new DynamicTimeFormat("更新于 %s"));//指定为经典Header，默认是 贝塞尔雷达Header
             }
         })
         //设置全局的Footer构建器
         SmartRefreshLayout.setDefaultRefreshFooterCreator(object : DefaultRefreshFooterCreator {
-            override fun createRefreshFooter(context: Context, layout: RefreshLayout): RefreshFooter {
+            override fun createRefreshFooter(
+                context: Context,
+                layout: RefreshLayout
+            ): RefreshFooter {
                 //指定为经典Footer，默认是 BallPulseFooter
                 return ClassicsFooter(context).setDrawableSize(20f)
             }
         })
+        CoverFrameViewConfig.defaultLoadingViewLayout = R.layout.custom_loading_view
 
     }
 

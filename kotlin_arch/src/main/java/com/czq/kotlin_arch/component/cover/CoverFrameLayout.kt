@@ -14,20 +14,23 @@ class CoverFrameLayout : FrameLayout {
     var loadingView: View? = null
     var emptyView: View? = null
     var errorView: View? = null
-    val inflater by lazy { LayoutInflater.from(context) }
     var doReload: (() -> Unit)? = null
+    var coverListener: CoverListener? = null
+
+    private val inflater by lazy { LayoutInflater.from(context) }
 
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    )
 
-    interface CoverFrameListener {
-        fun onReload()
-    }
 
     fun showLoading() {
         if (loadingView == null) {
-            loadingView = inflater.inflate(R.layout.common_loading_view, null)
+            loadingView = inflater.inflate(CoverFrameViewConfig.defaultLoadingViewLayout, null)
         }
         if (loadingView?.parent == null) {
             val lp = loadingView?.layoutParams
@@ -36,29 +39,30 @@ class CoverFrameLayout : FrameLayout {
         loadingView?.visibility = View.VISIBLE
         emptyView?.visibility = View.GONE
         errorView?.visibility = View.GONE
+        coverListener?.onShowLoading(loadingView)
 
     }
 
     fun showEmpty() {
         if (emptyView == null) {
-            emptyView = inflater.inflate(R.layout.common_empty_view, null)
+            emptyView = inflater.inflate(CoverFrameViewConfig.defaultEmptyViewLayout, null)
             emptyView?.setOnClickListener {
                 reload()
             }
         }
         if (emptyView?.parent == null) {
-//            val lp = emptyView?.layoutParams
             this.addView(emptyView)
         }
 
         emptyView?.visibility = View.VISIBLE
         loadingView?.visibility = View.GONE
         errorView?.visibility = View.GONE
+        coverListener?.onShowEmpty(emptyView)
     }
 
     fun showError() {
         if (errorView == null) {
-            errorView = inflater.inflate(R.layout.common_error_view, null)
+            errorView = inflater.inflate(CoverFrameViewConfig.defaultErrorViewLayout, null)
             errorView?.btnRetry?.setOnClickListener {
                 reload()
             }
@@ -67,16 +71,17 @@ class CoverFrameLayout : FrameLayout {
             val lp = errorView?.layoutParams
             this.addView(errorView)
         }
-
         errorView?.visibility = View.VISIBLE
         loadingView?.visibility = View.GONE
         emptyView?.visibility = View.GONE
+        coverListener?.onShowError(errorView)
     }
 
     fun showContent() {
         errorView?.visibility = View.GONE
         loadingView?.visibility = View.GONE
         emptyView?.visibility = View.GONE
+        coverListener?.onShowContent()
     }
 
     fun reload() {
