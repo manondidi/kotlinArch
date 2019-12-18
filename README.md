@@ -18,7 +18,7 @@ allprojects {
 ```
 ```
 
-implementation 'com.github.manondidi:kotlinArch:xxx'
+implementation 'com.github.manondidi:kotlinArch:latest-version'
 ```
 
 
