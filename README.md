@@ -1,7 +1,7 @@
 # kotlinArch[![](https://jitpack.io/v/manondidi/kotlinArch.svg)](https://jitpack.io/#manondidi/kotlinArch)
 kotlin开发脚手架
 
-开发模板 :https://github.com/manondidi/kotlinArchTemplate
+开发模板,可以一键生成mvp类,并自动写好相应通用代码 :https://github.com/manondidi/kotlinArchTemplate
 
 
 ### 混淆请参考demo工程的配法
