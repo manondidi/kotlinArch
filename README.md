@@ -1,7 +1,7 @@
 # kotlinArch[![](https://jitpack.io/v/manondidi/kotlinArch.svg)](https://jitpack.io/#manondidi/kotlinArch)
 kotlin开发脚手架
 
-开发模板 :https://github.com/manondidi/kotlinArchTemplate
+开发模板,可以一键生成mvp类,并自动写好相应通用代码 :https://github.com/manondidi/kotlinArchTemplate
 
 
 ### 混淆请参考demo工程的配法
@@ -12,7 +12,6 @@ kotlin开发脚手架
 
 allprojects {
     repositories {
-        ...
         maven { url "https://jitpack.io" }
     }
 }
@@ -48,21 +47,16 @@ implementation 'com.github.manondidi:kotlinArch:latest-version'
 
 - [x] 详细案例
 
-- [ ] 发布到jcenter
 
   ......
 
 
 
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc1.png)
+![图片](截图/sc1.png)
 
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc2.png)
+![图片](截图/sc2.png)
 
+![图片](截图/sc3.png)
 
-
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc3.png)
-
-
-
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc4.png)
+![图片](截图/sc4.png)
 
