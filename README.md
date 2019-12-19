@@ -4,7 +4,7 @@ kotlin开发脚手架
 开发模板 :https://github.com/manondidi/kotlinArchTemplate
 
 
-## 混淆请参考demo工程的配法
+### 混淆请参考demo工程的配法
 
 安装
 
