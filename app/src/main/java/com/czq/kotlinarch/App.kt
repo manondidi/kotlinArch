@@ -12,7 +12,9 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader
 import com.scwang.smartrefresh.layout.api.RefreshHeader
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator
 import android.content.Context
+import android.view.Gravity
 import com.czq.kotlin_arch.component.cover.CoverFrameViewConfig
+import com.hjq.toast.ToastUtils
 
 
 class App : Application() {
@@ -23,6 +25,8 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         application = this
+        ToastUtils.init(this)
+        ToastUtils.setGravity(Gravity.BOTTOM, 0, 0)
         Logger.addLogAdapter(object : AndroidLogAdapter() {
             override fun isLoggable(priority: Int, tag: String?): Boolean {
                 return BuildConfig.DEBUG

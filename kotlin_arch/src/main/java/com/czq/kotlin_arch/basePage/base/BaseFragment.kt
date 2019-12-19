@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
+import com.hjq.toast.ToastUtils
 import com.hwangjr.rxbus.RxBus
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
-import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_base.*
 
 abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
@@ -62,7 +62,7 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
 
     override fun showError(it: Throwable?) {
         coverLayout?.showError()
-        Toasty.error(context, "${it?.message ?: "加载失败"}", Toast.LENGTH_SHORT, true).show()
+        ToastUtils.show("${it?.message ?: "加载失败"}")
     }
 
 

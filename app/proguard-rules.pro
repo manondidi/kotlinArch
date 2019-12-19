@@ -141,3 +141,7 @@
 -keep class com.hwangjr.rxbus.**{*;}
 
 
+#============================== ToastUtil ==============================
+-keep class com.hjq.toast.** {*;}
+
+

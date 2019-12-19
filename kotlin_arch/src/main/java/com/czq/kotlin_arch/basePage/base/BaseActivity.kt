@@ -7,10 +7,10 @@ import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
+import com.hjq.toast.ToastUtils
 import com.hwangjr.rxbus.RxBus
 import com.orhanobut.logger.Logger
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
-import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_base.*
 
 abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseView {
@@ -84,7 +84,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
     override fun showError(it: Throwable?) {
         coverLayout?.showError()
         Logger.e(it, it?.message ?: "")
-        Toasty.error(this, "${it?.message ?: "加载失败"}", Toast.LENGTH_SHORT, true).show()
+        ToastUtils.show( "${it?.message ?: "加载失败"}")
     }
 
 
