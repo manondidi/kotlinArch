@@ -52,15 +52,11 @@ implementation 'com.github.manondidi:kotlinArch:latest-version'
 
 
 
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc1.png)
+![图片](截图/sc1.png)
 
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc2.png)
+![图片](截图/sc2.png)
 
+![图片](截图/sc3.png)
 
-
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc3.png)
-
-
-
-![图片](https://raw.githubusercontent.com/manondidi/kotlinArch/master/%E6%88%AA%E5%9B%BE/sc4.png)
+![图片](截图/sc4.png)
 
