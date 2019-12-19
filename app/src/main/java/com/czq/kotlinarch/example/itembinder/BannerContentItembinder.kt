@@ -11,8 +11,8 @@ import com.bumptech.glide.request.RequestOptions.bitmapTransform
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.R.id.ivFirefly
 import com.czq.kotlinarch.data.model.Banner
+import com.drakeet.multitype.ItemViewBinder
 import kotlinx.android.synthetic.main.recyclerview_item_banner_content.view.*
-import me.drakeet.multitype.ItemViewBinder
 
 
 class BannerContentItembinder : ItemViewBinder<Banner, BannerContentItembinder.ViewHolder>() {

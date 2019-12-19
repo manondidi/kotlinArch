@@ -7,11 +7,11 @@ import com.czq.kotlin_arch.basePage.base.BaseFragment
 import com.czq.kotlin_arch.basePage.base.IBasePagingPrensenter
 import com.czq.kotlin_arch.basePage.base.IBasePagingView
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
+import com.drakeet.multitype.MultiTypeAdapter
 import com.scwang.smartrefresh.header.MaterialHeader
 import com.scwang.smartrefresh.layout.constant.RefreshState
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter
 import kotlinx.android.synthetic.main.fragment_base_paging.*
-import me.drakeet.multitype.MultiTypeAdapter
 
 abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>(), IBasePagingView {
 

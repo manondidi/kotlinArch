@@ -10,9 +10,9 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions.bitmapTransform
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.model.FeedArticle
+import com.drakeet.multitype.ItemViewBinder
 import com.hwangjr.rxbus.RxBus
 import kotlinx.android.synthetic.main.recyclerview_item_feed_article.view.*
-import me.drakeet.multitype.ItemViewBinder
 
 
 class FeedArticleItembinder : ItemViewBinder<FeedArticle, FeedArticleItembinder.ViewHolder>() {

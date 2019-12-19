@@ -6,7 +6,6 @@ import com.czq.kotlin_arch.basePage.paging.BasePagingActivity
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.example.itembinder.BannerItembinder
 import com.czq.kotlinarch.example.itembinder.FeedArticleItembinder
-import me.drakeet.multitype.register
 
 
 class FeedArticleActivity : BasePagingActivity<FeedArticleContract.IPresenter>(), FeedArticleContract.IView {

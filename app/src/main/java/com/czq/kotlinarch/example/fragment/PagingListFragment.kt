@@ -12,7 +12,6 @@ import com.czq.kotlinarch.viewbinder.ChallengeViewbinder
 import com.czq.kotlinarch.viewbinder.CircleViewbinder
 import com.czq.kotlinarch.viewbinder.SeeMoreViewbinder
 import kotlinx.android.synthetic.main.fragment_paging_list.*
-import me.drakeet.multitype.register
 
 class PagingListFragment : BasePagingFragment<PagingListContact.PagingListPresenter>(), PagingListContact.PagingListView {
 

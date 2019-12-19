@@ -16,7 +16,6 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader
 import com.scwang.smartrefresh.layout.listener.SimpleMultiPurposeListener
 import kotlinx.android.synthetic.main.activity_game_list.*
 import kotlinx.android.synthetic.main.game_item_date.view.*
-import me.drakeet.multitype.register
 
 
 class GameListActivity : BasePagingActivity<GameListContact.PagingListPresenter>(), GameListContact.PagingListView {

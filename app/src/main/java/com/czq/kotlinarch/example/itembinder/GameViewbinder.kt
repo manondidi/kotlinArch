@@ -10,8 +10,8 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions.bitmapTransform
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.model.Game
+import com.drakeet.multitype.ItemViewBinder
 import kotlinx.android.synthetic.main.game_item.view.*
-import me.drakeet.multitype.ItemViewBinder
 
 
 class GameViewbinder : ItemViewBinder<Game, GameViewbinder.ViewHolder>() {

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.ChallengeRecommandSeeMoreVm
-import me.drakeet.multitype.ItemViewBinder
+import com.drakeet.multitype.ItemViewBinder
 
 
 class SeeMoreViewbinder : ItemViewBinder<ChallengeRecommandSeeMoreVm, SeeMoreViewbinder.ViewHolder>() {

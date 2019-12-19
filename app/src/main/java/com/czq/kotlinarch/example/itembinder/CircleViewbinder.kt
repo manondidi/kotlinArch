@@ -10,8 +10,8 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions.bitmapTransform
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.ChallengeRecomandCircleVm
+import com.drakeet.multitype.ItemViewBinder
 import kotlinx.android.synthetic.main.challenge_home_item_circle.view.*
-import me.drakeet.multitype.ItemViewBinder
 
 class CircleViewbinder : ItemViewBinder<ChallengeRecomandCircleVm, CircleViewbinder.ViewHolder>() {
 

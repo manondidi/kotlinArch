@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.GameDate
+import com.drakeet.multitype.ItemViewBinder
 import kotlinx.android.synthetic.main.game_item_date.view.*
-import me.drakeet.multitype.ItemViewBinder
 
 
 class GameDateViewbinder : ItemViewBinder<GameDate, GameDateViewbinder.ViewHolder>() {

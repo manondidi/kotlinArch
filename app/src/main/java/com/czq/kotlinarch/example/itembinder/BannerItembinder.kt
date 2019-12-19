@@ -7,10 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.BannerList
 import com.czq.kotlinarch.example.component.GalleryLayoutManager
+import com.drakeet.multitype.ItemViewBinder
+import com.drakeet.multitype.MultiTypeAdapter
 import kotlinx.android.synthetic.main.recyclerview_item_banner.view.*
-import me.drakeet.multitype.ItemViewBinder
-import me.drakeet.multitype.MultiTypeAdapter
-import me.drakeet.multitype.register
 
 
 class BannerItembinder : ItemViewBinder<BannerList, BannerItembinder.ViewHolder>() {
