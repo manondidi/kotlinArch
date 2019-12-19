@@ -34,15 +34,12 @@ class BannerItembinder : ItemViewBinder<BannerList, BannerItembinder.ViewHolder>
         init {
             val layoutManager = GalleryLayoutManager(GalleryLayoutManager.HORIZONTAL)
             layoutManager.attach(itemView.banner)
-
             layoutManager.setItemTransformer(ScaleTransformer())
             itemView.banner.setAdapter(adapter)
-
         }
     }
 
     class ScaleTransformer : GalleryLayoutManager.ItemTransformer {
-
 
         override fun transformItem(layoutManager: GalleryLayoutManager, item: View, fraction: Float) {
             item.pivotX = item.width / 2f
