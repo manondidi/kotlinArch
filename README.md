@@ -12,7 +12,6 @@ kotlin开发脚手架
 
 allprojects {
     repositories {
-        ...
         maven { url "https://jitpack.io" }
     }
 }
@@ -48,7 +47,6 @@ implementation 'com.github.manondidi:kotlinArch:latest-version'
 
 - [x] 详细案例
 
-- [ ] 发布到jcenter
 
   ......
 
