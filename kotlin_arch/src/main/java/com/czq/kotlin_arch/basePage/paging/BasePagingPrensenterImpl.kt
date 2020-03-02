@@ -1,14 +1,15 @@
 package com.czq.kotlin_arch.basePage.base
+
 import com.czq.kotlin_arch.paging.PagingStrategy
 
-abstract class BasePagingPrensenterImpl(val mView: IBasePagingView) : IBasePrensenter {
+abstract class BasePagingPrensenterImpl(open val mView: IBasePagingView) : IBasePrensenter {
 
 
     val datasource = arrayListOf<Any>()
     val pagingList = arrayListOf<Any>()
 
     var mPagingStrategy: PagingStrategy? = null
-        get
+
 
     override fun start() {
         mPagingStrategy = getPagingStrategy()
