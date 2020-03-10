@@ -24,7 +24,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (!needTitle()) {
-            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            supportActionBar?.hide()
         } else {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
