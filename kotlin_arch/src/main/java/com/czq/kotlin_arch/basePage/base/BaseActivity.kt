@@ -1,8 +1,11 @@
 package com.czq.kotlin_arch.basePage.base
 
+import android.app.Activity
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -28,12 +31,25 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
         } else {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
+        if (needHideBottomUiMenu()) {
+            hideBottomUIMenu()
+        }
         initContentView()
         initView()
         mPresenter = createPresenter()
         lifecycle.addObserver(mPresenter)
         RxBus.get().register(mPresenter)
         mPresenter.start()
+    }
+
+    fun needHideBottomUiMenu(): Boolean {
+        return false
+    }
+
+    fun hideBottomUIMenu() { //隐藏虚拟按键，并且全屏
+        // lower api
+        val v = window.decorView
+        v.systemUiVisibility = View.GONE
     }
 
 
@@ -56,7 +72,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
 
     abstract fun getLayoutId(): Int
 
-    open fun initContentView(){
+    open fun initContentView() {
         setContentView(getLayoutId())
     }
 
@@ -84,9 +100,8 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
     override fun showError(it: Throwable?) {
         coverLayout?.showError()
         Logger.e(it, it?.message ?: "")
-        ToastUtils.show( "${it?.message ?: "加载失败"}")
+        ToastUtils.show("${it?.message ?: "加载失败"}")
     }
-
 
 
     override fun onDestroy() {
