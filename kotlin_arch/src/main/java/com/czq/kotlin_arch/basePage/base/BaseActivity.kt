@@ -31,9 +31,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
         } else {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
-        if (needHideBottomUiMenu()) {
-            hideBottomUIMenu()
-        }
+
         initContentView()
         initView()
         mPresenter = createPresenter()
@@ -42,15 +40,8 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
         mPresenter.start()
     }
 
-    fun needHideBottomUiMenu(): Boolean {
-        return false
-    }
 
-    fun hideBottomUIMenu() { //隐藏虚拟按键，并且全屏
-        // lower api
-        val v = window.decorView
-        v.systemUiVisibility = View.GONE
-    }
+
 
 
     override fun autoDispose(): AndroidLifecycleScopeProvider {
