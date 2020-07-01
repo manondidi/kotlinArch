@@ -20,7 +20,7 @@ import com.hwangjr.rxbus.annotation.Subscribe
 import com.hwangjr.rxbus.annotation.Tag
 
 
-class FeedArticlePresenter(mView: FeedArticleContract.IView) : BasePagingPrensenterImpl(mView),
+class FeedArticlePresenter(override val mView: FeedArticleContract.IView) : BasePagingPrensenterImpl(mView),
         FeedArticleContract.IPresenter {
     val mRemoteDataRepository: RemoteDataRepository by lazy {
         RemoteDataRepository()

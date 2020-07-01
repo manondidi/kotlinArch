@@ -93,4 +93,8 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
         multiAdapter.items = datasource
         multiAdapter.notifyDataSetChanged()
     }
+
+    override fun notifyDataChange() {
+        multiAdapter.notifyDataSetChanged()
+    }
 }

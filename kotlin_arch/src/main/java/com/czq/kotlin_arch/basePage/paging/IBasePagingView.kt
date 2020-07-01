@@ -23,4 +23,5 @@ interface IBasePagingView : IBaseView {
     fun setRecyclerViewData(datasource: ArrayList<Any>)
 
 
+    fun notifyDataChange()
 }

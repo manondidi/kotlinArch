@@ -11,7 +11,8 @@ import com.uber.autodispose.lifecycle.autoDisposable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-open class GameListPresenter(mView: GameListContact.PagingListView) : BasePagingPrensenterImpl(mView),
+open class GameListPresenter(override val mView: GameListContact.PagingListView) :
+    BasePagingPrensenterImpl(mView),
     GameListContact.PagingListPresenter {
     var day = 30
 

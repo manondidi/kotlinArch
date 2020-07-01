@@ -7,6 +7,7 @@ class GameListContact {
 
 
     interface PagingListView : IBasePagingView {
+        fun hello()
 
     }
 

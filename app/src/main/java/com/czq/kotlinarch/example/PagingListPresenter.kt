@@ -11,7 +11,7 @@ import com.uber.autodispose.lifecycle.autoDisposable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-open class PagingListPresenter(mView: PagingListContact.PagingListView) : BasePagingPrensenterImpl(mView),
+open class PagingListPresenter(override val mView: PagingListContact.PagingListView) : BasePagingPrensenterImpl(mView),
     PagingListContact.PagingListPresenter {
 
     val mRemoteDataRepository: RemoteDataRepository by lazy {

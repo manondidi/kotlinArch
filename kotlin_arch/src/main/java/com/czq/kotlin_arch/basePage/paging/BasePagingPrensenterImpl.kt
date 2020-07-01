@@ -28,6 +28,7 @@ abstract class BasePagingPrensenterImpl(open val mView: IBasePagingView) : IBase
         onLoadData(mPagingStrategy)
     }
 
+
     fun loadFail(it: Throwable) {
         if (mView.isRefreshing()) {
             mView.stopRefresh()
