@@ -63,6 +63,6 @@ dependencies {
     //下拉刷新
 
     implementation project(path: ':kotlin_arch')
-    kapt 'androidx.databinding:databinding-compiler:3.5.3'
+    kapt 'androidx.databinding:databinding-compiler:4.0.0'
 
 }
