@@ -19,7 +19,8 @@ kotlin开发脚手架
 > 并且做了一个模板 一键生成 对应的itembinder  
 
 
-开发模板,可以一键生成mvp类,并自动写好相应通用代码 :https://github.com/manondidi/kotlinArchTemplate
+开发模板androidstudio 4.1后不可使用
+~~开发模板,可以一键生成mvp类,并自动写好相应通用代码 :https://github.com/manondidi/kotlinArchTemplate~~
 
 
 ### 混淆请参考demo工程的配法
