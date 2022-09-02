@@ -84,7 +84,7 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
     }
 
     override fun setRecyclerViewData(datasource: ArrayList<Any>) {
-        multiAdapter.items=datasource
+        multiAdapter.items = datasource
         multiAdapter.notifyDataSetChanged()
     }
 
