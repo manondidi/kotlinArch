@@ -48,7 +48,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
         return AndroidLifecycleScopeProvider.from(this)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item?.itemId == android.R.id.home) {
             onBackPressed()
         }
