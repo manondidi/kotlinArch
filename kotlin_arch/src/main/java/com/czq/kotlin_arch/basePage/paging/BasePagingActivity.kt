@@ -87,5 +87,8 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         multiAdapter.items = datasource
         multiAdapter.notifyDataSetChanged()
     }
+    override fun notifyDataChange() {
+        multiAdapter.notifyDataSetChanged()
+    }
 
 }

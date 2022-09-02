@@ -30,4 +30,6 @@ class FeedArticleActivity : BasePagingActivity<FeedArticleContract.IPresenter>()
     }
 
 
+
+
 }
