@@ -88,8 +88,4 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         multiAdapter.notifyDataSetChanged()
     }
 
-    override fun notifyDataChange() {
-        multiAdapter.notifyDataSetChanged()
-    }
-
 }
