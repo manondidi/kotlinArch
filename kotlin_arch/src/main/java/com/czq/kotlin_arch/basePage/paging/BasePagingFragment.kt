@@ -37,7 +37,7 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
         }
 
         coverLayout?.doReload = {
-            refreshLayout.autoRefresh()
+            beginRefresh()
         }
     }
 
@@ -74,6 +74,9 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
 
 
     override fun beginRefresh() {
+        if (isRefreshing() || isLoadingMore()) {
+            return
+        }
         refreshLayout.autoRefresh()
     }
 

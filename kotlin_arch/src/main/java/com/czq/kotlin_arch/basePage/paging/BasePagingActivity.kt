@@ -9,6 +9,10 @@ import com.czq.kotlin_arch.basePage.base.IBasePagingView
 import com.drakeet.multitype.MultiTypeAdapter
 import com.scwang.smartrefresh.layout.constant.RefreshState
 import kotlinx.android.synthetic.main.activity_base_paging.*
+import kotlinx.android.synthetic.main.activity_base_paging.coverLayout
+import kotlinx.android.synthetic.main.activity_base_paging.pagingRecycleview
+import kotlinx.android.synthetic.main.activity_base_paging.refreshLayout
+import kotlinx.android.synthetic.main.fragment_base_paging.*
 
 abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>(), IBasePagingView {
     val multiAdapter: MultiTypeAdapter = MultiTypeAdapter()
@@ -31,7 +35,7 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
             mPresenter.loadData()
         }
         coverLayout?.doReload = {
-            refreshLayout.autoRefresh()
+            beginRefresh()
         }
     }
 
@@ -68,6 +72,9 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
 
 
     override fun beginRefresh() {
+        if (isRefreshing() || isLoadingMore()) {
+            return
+        }
         refreshLayout.autoRefresh()
     }
 
