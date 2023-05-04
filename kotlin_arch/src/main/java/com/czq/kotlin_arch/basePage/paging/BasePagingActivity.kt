@@ -62,17 +62,13 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         showLoading()
     }
 
-    override fun isRefreshing(): Boolean {
-        return refreshLayout.state == RefreshState.Refreshing
-    }
-
-    override fun isLoadingMore(): Boolean {
-        return refreshLayout.state == RefreshState.Loading
+    override fun isRefreshLoading(): Boolean {
+        return refreshLayout.state != RefreshState.None
     }
 
 
     override fun beginRefresh() {
-        if (isRefreshing() || isLoadingMore()) {
+        if (isRefreshLoading()) {
             return
         }
         refreshLayout.autoRefresh()

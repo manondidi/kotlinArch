@@ -29,11 +29,11 @@ abstract class BasePagingPrensenterImpl(open val mView: IBasePagingView) : IBase
     }
 
     fun loadFail(it: Throwable) {
-        if (mView.isRefreshing()) {
+        if (mView.isRefreshLoading()) {
             mView.stopRefresh()
         }
 
-        if (mView.isLoadingMore()) {
+        if (mView.isRefreshLoading()) {
             mView.stopLoadingdMore(false)
         }
 
@@ -44,7 +44,7 @@ abstract class BasePagingPrensenterImpl(open val mView: IBasePagingView) : IBase
 
     fun loadSuccess(resultData: Any? = null) {
         val isFinish = mPagingStrategy?.checkFinish(resultData, pagingList.size) ?: true
-        if (mView.isRefreshing()) {
+        if (mView.isRefreshLoading()) {
             mView.stopRefresh()
         }
         mView.stopLoadingdMore(isFinish)
