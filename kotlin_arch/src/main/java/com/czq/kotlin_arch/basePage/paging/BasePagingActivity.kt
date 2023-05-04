@@ -7,7 +7,7 @@ import com.czq.kotlin_arch.basePage.base.BaseActivity
 import com.czq.kotlin_arch.basePage.base.IBasePagingPrensenter
 import com.czq.kotlin_arch.basePage.base.IBasePagingView
 import com.drakeet.multitype.MultiTypeAdapter
-import com.scwang.smartrefresh.layout.constant.RefreshState
+import com.scwang.smart.refresh.layout.constant.RefreshState
 import kotlinx.android.synthetic.main.activity_base_paging.*
 import kotlinx.android.synthetic.main.activity_base_paging.coverLayout
 import kotlinx.android.synthetic.main.activity_base_paging.pagingRecycleview
