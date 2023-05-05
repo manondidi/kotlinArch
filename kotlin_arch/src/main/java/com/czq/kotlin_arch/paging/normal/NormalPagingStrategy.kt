@@ -8,7 +8,7 @@ import kotlin.reflect.jvm.javaField
 class NormalPagingStrategy constructor(var startPageNum: Int = 0, var pageSize: Int = 20) :
     PagingStrategy {
 
-    lateinit var pageInfo: NormalPagingInfo
+      var pageInfo: NormalPagingInfo = NormalPagingInfo()
 
 
     fun initData() {

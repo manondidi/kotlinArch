@@ -8,6 +8,7 @@ class OffsetStrategy(var pageSize: Int = 20, var offsetIdKey: String) : PagingSt
 
 
     fun initData() {
+        pageInfo = OffsetPageInfo()
         pageInfo.pageSize = pageSize
         pageInfo.type = "new"
         pageInfo.offsetId = null
