@@ -48,10 +48,10 @@ abstract class BasePagingPrensenterImpl(open val mView: IBasePagingView) : IBase
             mView.stopRefresh()
         }
         mView.stopLoadingdMore(isFinish)
+        mView?.setRecyclerViewData(datasource)
         if (datasource.isEmpty()) {
             mView?.showRecyclerViewEmpty()
         } else {
-            mView?.setRecyclerViewData(datasource)
             mView?.showRecyclerViewContent()
         }
         mPagingStrategy?.addPage(resultData)
