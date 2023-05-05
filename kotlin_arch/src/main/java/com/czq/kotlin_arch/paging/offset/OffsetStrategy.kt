@@ -2,15 +2,15 @@ package com.czq.kotlin_arch.paging.offset
 
 import com.czq.kotlin_arch.paging.PagingStrategy
 
-class OffsetStrategy(pageSize: Int = 20, offsetIdKey: String) : PagingStrategy {
+class OffsetStrategy(var pageSize: Int = 20, var offsetIdKey: String) : PagingStrategy {
 
     var pageInfo: OffsetPageInfo = OffsetPageInfo()
-    var offsetIdKey = ""
 
-    init {
+
+    fun initData() {
         pageInfo.pageSize = pageSize
-        this.offsetIdKey = offsetIdKey
-        this.pageInfo.type = "new"
+        pageInfo.type = "new"
+        pageInfo.offsetId = null
     }
 
     override fun addPage(info: Any?) {
@@ -27,8 +27,7 @@ class OffsetStrategy(pageSize: Int = 20, offsetIdKey: String) : PagingStrategy {
     }
 
     override fun resetPage() {
-        pageInfo.type = "new"
-        pageInfo.offsetId = null
+        initData()
     }
 
     override fun getPageInfo(): Any {
