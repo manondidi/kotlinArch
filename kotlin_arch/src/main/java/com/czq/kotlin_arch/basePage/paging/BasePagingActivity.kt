@@ -71,6 +71,7 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         if (isRefreshLoading()) {
             return
         }
+        showRecyclerViewContent()
         refreshLayout.autoRefresh()
     }
 
