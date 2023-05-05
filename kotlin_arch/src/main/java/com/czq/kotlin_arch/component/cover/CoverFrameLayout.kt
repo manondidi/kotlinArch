@@ -85,10 +85,9 @@ class CoverFrameLayout : FrameLayout {
     }
 
     fun reload() {
-        if (loadingView?.visibility ==View.VISIBLE){
+        if (loadingView?.visibility == View.VISIBLE){
             return
         }
-        showLoading()
         doReload?.invoke()
     }
 }

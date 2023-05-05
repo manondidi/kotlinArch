@@ -38,6 +38,7 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
 
     open fun initView() {
         coverLayout?.doReload = {
+            showLoading()
             mPresenter?.start()
         }
     }

@@ -67,7 +67,7 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
     }
 
     override fun isRefreshLoading(): Boolean {
-        return refreshLayout.state != RefreshState.None
+        return  return refreshLayout.state == RefreshState.Refreshing || refreshLayout.state == RefreshState.Loading
     }
 
     override fun beginRefresh() {
