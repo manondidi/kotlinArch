@@ -26,7 +26,7 @@ abstract class BasePagingActivity<T : IBasePagingPrensenter> : BaseActivity<T>()
         title = "BasePagingActivity"
         pagingRecycleview.layoutManager = LinearLayoutManager(this)
         pagingRecycleview.adapter = multiAdapter
-        showRecyclerViewLoading()
+//        showRecyclerViewLoading()
         refreshLayout.setOnRefreshListener {
             mPresenter.resetPage()
             mPresenter.loadData()

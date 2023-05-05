@@ -29,7 +29,7 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
         super.initView()
         pagingRecycleview.layoutManager = LinearLayoutManager(context)
         pagingRecycleview.adapter = multiAdapter
-        showRecyclerViewLoading()
+//        showRecyclerViewLoading()
         refreshLayout.setOnRefreshListener {
             mPresenter.resetPage()
             mPresenter.loadData()
