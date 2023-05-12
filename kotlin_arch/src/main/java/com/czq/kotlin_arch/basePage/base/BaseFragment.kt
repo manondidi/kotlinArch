@@ -22,7 +22,11 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
         return activity!!
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(getLayoutId(), container, false)
     }
 
@@ -34,6 +38,13 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
         RxBus.get().register(mPresenter)
         lifecycle.addObserver(mPresenter)
         mPresenter.start()
+    }
+
+    override fun onDestroyView() {
+        lifecycle.removeObserver(mPresenter)
+        RxBus.get().unregister(mPresenter)
+        super.onDestroyView()
+
     }
 
     open fun initView() {
@@ -73,8 +84,6 @@ abstract class BaseFragment<T : IBasePrensenter> : Fragment(), IBaseView {
 
     override fun onDestroy() {
         super.onDestroy()
-        lifecycle.removeObserver(mPresenter)
-        RxBus.get().unregister(mPresenter)
     }
 
 }
