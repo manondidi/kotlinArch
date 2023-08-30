@@ -3,18 +3,19 @@ package com.czq.kotlinarch
 import android.app.Application
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
-import com.scwang.smartrefresh.layout.footer.ClassicsFooter
-import com.scwang.smartrefresh.layout.api.RefreshLayout
-import com.scwang.smartrefresh.layout.api.RefreshFooter
-import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator
-import com.scwang.smartrefresh.layout.SmartRefreshLayout
-import com.scwang.smartrefresh.layout.header.ClassicsHeader
-import com.scwang.smartrefresh.layout.api.RefreshHeader
-import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator
+
+import com.scwang.smart.refresh.layout.api.RefreshLayout
+import com.scwang.smart.refresh.layout.api.RefreshFooter
+import com.scwang.smart.refresh.layout.SmartRefreshLayout
 import android.content.Context
 import android.view.Gravity
 import com.czq.kotlin_arch.component.cover.CoverFrameViewConfig
 import com.hjq.toast.ToastUtils
+import com.scwang.smart.refresh.footer.ClassicsFooter
+import com.scwang.smart.refresh.header.ClassicsHeader
+import com.scwang.smart.refresh.layout.api.RefreshHeader
+import com.scwang.smart.refresh.layout.listener.DefaultRefreshFooterCreator
+import com.scwang.smart.refresh.layout.listener.DefaultRefreshHeaderCreator
 
 
 class App : Application() {

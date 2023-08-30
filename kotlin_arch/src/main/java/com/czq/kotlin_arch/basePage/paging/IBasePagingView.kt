@@ -16,11 +16,9 @@ interface IBasePagingView : IBaseView {
 
     fun stopLoadingdMore(finish: Boolean)
 
-    fun isRefreshing(): Boolean
-
-    fun isLoadingMore(): Boolean
-
     fun setRecyclerViewData(datasource: ArrayList<Any>)
+
+    fun isRefreshLoading():Boolean
 
 
     fun notifyDataChange()

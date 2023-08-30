@@ -5,13 +5,15 @@ import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.isAccessible
 import kotlin.reflect.jvm.javaField
 
-class NormalPagingStrategy constructor(startPageNum: Int = 0, pageSize: Int = 20) : PagingStrategy {
+class NormalPagingStrategy constructor(var startPageNum: Int = 0, var pageSize: Int = 20) :
+    PagingStrategy {
 
-    val pageInfo: NormalPagingInfo =
-        NormalPagingInfo()
+    var pageInfo: NormalPagingInfo = NormalPagingInfo()
 
-    init {
-        pageInfo.startPageNum = startPageNum
+
+    fun initData() {
+        pageInfo = NormalPagingInfo()
+        pageInfo.startPageNum = this.startPageNum
         pageInfo.pageNum = startPageNum;
         pageInfo.pageSize = pageSize
     }
@@ -22,7 +24,7 @@ class NormalPagingStrategy constructor(startPageNum: Int = 0, pageSize: Int = 20
     }
 
     override fun resetPage() {
-        pageInfo.pageNum = pageInfo.startPageNum
+        initData()
     }
 
     override fun getPageInfo(): Any {

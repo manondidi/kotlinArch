@@ -70,6 +70,7 @@ abstract class BaseActivity<T : IBasePrensenter> : AppCompatActivity(), IBaseVie
     open fun initView() {
         title = "BaseActivity"
         coverLayout?.doReload = {
+            showLoading()
             mPresenter?.start()
         }
 

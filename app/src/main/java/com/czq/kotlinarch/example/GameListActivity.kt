@@ -9,11 +9,10 @@ import com.czq.kotlinarch.R
 import com.czq.kotlinarch.data.viewModel.GameDate
 import com.czq.kotlinarch.viewbinder.GameDateViewbinder
 import com.czq.kotlinarch.viewbinder.GameViewbinder
-import com.scwang.smartrefresh.layout.api.RefreshHeader
-import com.scwang.smartrefresh.layout.constant.RefreshState
-import com.scwang.smartrefresh.layout.header.BezierRadarHeader
-import com.scwang.smartrefresh.layout.header.ClassicsHeader
-import com.scwang.smartrefresh.layout.listener.SimpleMultiPurposeListener
+import com.scwang.smart.refresh.header.BezierRadarHeader
+import com.scwang.smart.refresh.layout.api.RefreshHeader
+import com.scwang.smart.refresh.layout.constant.RefreshState
+import com.scwang.smart.refresh.layout.simple.SimpleMultiListener
 import kotlinx.android.synthetic.main.activity_game_list.*
 import kotlinx.android.synthetic.main.game_item_date.view.*
 
@@ -55,7 +54,7 @@ class GameListActivity : BasePagingActivity<GameListContact.PagingListPresenter>
 
     private fun preparStickyView() {
         stickyHeaderView?.visibility = View.GONE
-        refreshLayout.setOnMultiPurposeListener(object : SimpleMultiPurposeListener() {
+        refreshLayout.setOnMultiListener(object : SimpleMultiListener() {
             override fun onHeaderMoving(header: RefreshHeader?, isDragging: Boolean, percent: Float, offset: Int, headerHeight: Int, maxDragHeight: Int) {
                 super.onHeaderMoving(header, isDragging, percent, offset, headerHeight, maxDragHeight)
                 if (isDragging) {

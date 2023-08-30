@@ -8,10 +8,12 @@ import com.czq.kotlin_arch.basePage.base.IBasePagingPrensenter
 import com.czq.kotlin_arch.basePage.base.IBasePagingView
 import com.czq.kotlin_arch.component.cover.CoverFrameLayout
 import com.drakeet.multitype.MultiTypeAdapter
-import com.scwang.smartrefresh.header.MaterialHeader
-import com.scwang.smartrefresh.layout.constant.RefreshState
-import com.scwang.smartrefresh.layout.footer.ClassicsFooter
+import com.scwang.smart.refresh.layout.constant.RefreshState
+import kotlinx.android.synthetic.main.activity_base_paging.*
 import kotlinx.android.synthetic.main.fragment_base_paging.*
+import kotlinx.android.synthetic.main.fragment_base_paging.coverLayout
+import kotlinx.android.synthetic.main.fragment_base_paging.pagingRecycleview
+import kotlinx.android.synthetic.main.fragment_base_paging.refreshLayout
 
 abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>(), IBasePagingView {
 
@@ -27,7 +29,7 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
         super.initView()
         pagingRecycleview.layoutManager = LinearLayoutManager(context)
         pagingRecycleview.adapter = multiAdapter
-        showRecyclerViewLoading()
+//        showRecyclerViewLoading()
         refreshLayout.setOnRefreshListener {
             mPresenter.resetPage()
             mPresenter.loadData()
@@ -37,7 +39,7 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
         }
 
         coverLayout?.doReload = {
-            refreshLayout.autoRefresh()
+            beginRefresh()
         }
     }
 
@@ -64,16 +66,15 @@ abstract class BasePagingFragment<T : IBasePagingPrensenter> : BaseFragment<T>()
         showLoading()
     }
 
-    override fun isRefreshing(): Boolean {
-        return refreshLayout.state == RefreshState.Refreshing
+    override fun isRefreshLoading(): Boolean {
+        return  return refreshLayout.state == RefreshState.Refreshing || refreshLayout.state == RefreshState.Loading
     }
-
-    override fun isLoadingMore(): Boolean {
-        return refreshLayout.state == RefreshState.Loading
-    }
-
 
     override fun beginRefresh() {
+        if (isRefreshLoading()) {
+            return
+        }
+        showRecyclerViewContent()
         refreshLayout.autoRefresh()
     }
 
